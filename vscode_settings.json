@@ -1,12 +1,28 @@
 {
-    "files.autoSave": "on",
+    "editor.cursorStyle": "underline",
+
+    "editor.cursorBlinking": "phase",
+
+    "editor.minimap.maxColumn": 80,
+
+    "editor.renderControlCharacters": true,
+
+    "editor.renderLineHighlight": "all",
 
     "editor.renderWhitespace": "all",
 
-    "editor.cursorStyle": "underline",
+    "editor.rulers": [
+        80
+    ],
 
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.showFoldingControls": "always",
+
+    "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 80,
+
+    "diffEditor.ignoreTrimWhitespace": false,
+
+    "files.autoSave": "on",
 
     "files.exclude": {
         "**/.git": true,
@@ -16,6 +32,10 @@
         "**/.DS_Store": true,
         "**/.idea": true
     },
+
+    "files.insertFinalNewline": true,
+
+    "files.trimTrailingWhitespace": true,
 
     "keyboard.dispatch": "keyCode"
 }
