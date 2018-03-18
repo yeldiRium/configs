@@ -1,1 +1,21 @@
-/home/yeldir/.config/Code/User/settings.json
+{
+    "files.autoSave": "on",
+
+    "editor.renderWhitespace": "all",
+
+    "editor.cursorStyle": "underline",
+
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
+
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/.idea": true
+    },
+
+    "keyboard.dispatch": "keyCode"
+}
