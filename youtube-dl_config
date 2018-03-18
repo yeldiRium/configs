@@ -1,0 +1,6 @@
+--no-mtime
+-o ~/querbeet/audio/mucke/einsortieren/%(title)s.%(ext)s
+--restrict-filename
+--format bestaudio
+--extract-audio
+--audio-format mp3
