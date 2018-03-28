@@ -199,7 +199,7 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "oem_8 alt+up",
+        "key": "alt+up",
         "command": "editor.fold",
         "when": "editorTextFocus"
     },
@@ -209,7 +209,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "oem_8 alt+down",
+        "key": "alt+down",
         "command": "editor.unfold",
         "when": "editorTextFocus"
     },
@@ -225,5 +225,15 @@
     {
         "key": "ctrl+k enter",
         "command": "-workbench.action.keepEditor"
+    },
+    {
+        "key": "alt+enter",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "-editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
     }
 ]
