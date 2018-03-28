@@ -9,7 +9,6 @@
   "author": "Hannes Leutloff <hannes.leutloff@aol.de>",
   "license": "ISC",
   "dependencies": {
-    "atom-package-manager": "^1.19.0",
     "babel-cli": "^6.26.0",
     "bower": "^1.8.2",
     "browserify": "^16.1.1",
@@ -22,10 +21,8 @@
     "require": "^2.4.20",
     "rollup": "^0.57.1",
     "semver": "^5.5.0",
-    "uglify-js": "^3.3.16",
     "vue-cli": "^2.9.3",
     "webpack": "^4.3.0",
-    "webpack-cli": "^2.0.13",
-    "yarn": "^1.5.1"
+    "webpack-cli": "^2.0.13"
   }
 }
