@@ -36,7 +36,7 @@ set $tag3 3: bachelor
 set $tag4 4: dev
 set $tag5 5
 set $tag6 6
-set $tag7 7: mail
+set $tag7 7: orga
 set $tag8 8: social
 set $tag9 9
 set $tag10 10
@@ -46,6 +46,7 @@ assign [class="Spotify"] $tag10
 assign [class="mirage"] $tag10
 assign [class="vlc"] $tag10
 assign [title="ncmpcpp 0.7.3"] $tag10
+assign [class="Homebank"] $tag7
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -237,4 +238,5 @@ smart_gaps on
 exec pasystray
 exec firefox
 exec thunderbird
+exec homebank
 
