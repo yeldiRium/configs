@@ -47,6 +47,7 @@ assign [class="mirage"] $tag10
 assign [class="vlc"] $tag10
 assign [title="ncmpcpp 0.7.3"] $tag10
 assign [class="Homebank"] $tag7
+assign [class="telegram-desktop"] $tag8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
