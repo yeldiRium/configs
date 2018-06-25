@@ -38,6 +38,9 @@ alias dcvert2='xrandr --output LVDS-1 --off --output VGA-1 --auto --panning 1920
 # gource
 alias gourceFull='gource efla-web/ --seconds-per-day 1 --file-idle-time 0 --title "Ste3k101" --key -1920x1080 -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 20 -threads 0 -bf 0 gource.mp4'
 
+# environment variables
+export npm_config_prefix=~/.node_modules
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 
