@@ -1,5 +1,21 @@
-# The following lines were added by compinstall
+ZSH=/usr/share/oh-my-zsh/
+ZSH_THEME="robbyrussell"
+plugins=(
+	cabal # completion for haskell build tool cabal
+	docker # completion
+	npm # completion
+	git # a LOT of aliases for git
+	pip # completion
+	python # completion
+	wd # efficient directory switching
+)
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
+source $ZSH/oh-my-zsh.sh
 
+# The following lines were added by compinstall
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' menu select=long
