@@ -1,9 +1,28 @@
-#
-# ~/.bashrc
-#
+# The following lines were added by compinstall
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle :compinstall filename '/home/yeldir/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+unsetopt beep
+bindkey -v
+# End of lines configured by zsh-newuser-install
+
+# manual zsh configuration
+setopt COMPLETE_ALIASES
+setopt LIST_AMBIGUOUS
+setopt LIST_ROWS_FIRST
+setopt AUTO_CD
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # aliases
 alias ls='ls --color=auto'
@@ -31,16 +50,15 @@ alias phpunitip='phpunit --process-isolation'
 
 # utility
 alias ll='ls -al'
-alias dchome='xrandr --output LVDS-1 --off --output VGA-1 --auto --panning 1920x1080+1920+350 --output HDMI-2 --auto --panning 1920x1080+0+0 --primary'
-alias dcvert='xrandr --output LVDS-1 --off --output VGA-1 --auto --panning 1920x1080+0+0 --primary --output HDMI-2 --auto --panning 1920x1080+0+1080'
-alias dcmobile='xrandr --output HDMI-1 --off --output HDMI-2 --off --output VGA-1 --off --output LVDS-1 --auto --primary'
-alias dcvert2='xrandr --output LVDS-1 --off --output VGA-1 --auto --panning 1920x1080+0+1080 --primary --output HDMI-2 --auto --panning 1920x1080+0+0'
+alias dchome='xrandr --output LVDS-1 --off --output VGA-1 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-2 --primary --mode 1920x1080 --pos 1080x376'
+alias dcmobile='xrandr --output HDMI-2 --off --output VGA-1 --off --output LVDS-1 --auto --primary'
 
 # gource
-alias gourceFull='gource efla-web/ --seconds-per-day 1 --file-idle-time 0 --title "Ste3k101" --key -1920x1080 -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 20 -threads 0 -bf 0 gource.mp4'
+function gourceVid() {
+	gource $1 --seconds-per-day 1 --file-idle-time 0 --title "Ste3k101" --key -1920x1080 -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 20 -threads 0 -bf 0 $2
+}
 
-# add rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+alias gourceFull='gource efla-web/ --seconds-per-day 1 --file-idle-time 0 --title "Ste3k101" --key -1920x1080 -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 20 -threads 0 -bf 0 gource.mp4'
 
 # add npm-do for executing local packages
 function npm-do { (PATH=$(npm bin):$PATH; eval $@;) }
@@ -105,6 +123,7 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
