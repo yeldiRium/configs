@@ -1,5 +1,5 @@
 ZSH=/usr/share/oh-my-zsh/
-ZSH_THEME="robbyrussell"
+ZSH_THEME="avit"
 plugins=(
 	cabal # completion for haskell build tool cabal
 	docker # completion
