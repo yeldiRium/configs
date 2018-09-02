@@ -40,6 +40,13 @@ setopt LIST_ROWS_FIRST
 setopt AUTO_CD
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# movement
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
+bindkey "^[[3~" delete-char
+
 # aliases
 alias ls='ls --color=auto'
 alias ll='ls -al'
