@@ -1,6 +1,4 @@
 * Emacs configuration
-
-* Packages
 ** package archives
 load emacs 24's package system. Add MELPA repository.
 #+BEGIN_SRC emacs-lisp
@@ -48,6 +46,7 @@ new code there into this block.
  )
 #+END_SRC
 
+* Packages
 ** org-mode
 *** variables
 
