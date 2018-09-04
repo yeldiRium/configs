@@ -2,10 +2,10 @@
 ** Keybindings
 Bind window movement to Meta+Arrow Keys
 #+BEGIN_SRC emacs-lisp
-(global-set-key (kbd "C-<up>") 'windmove-up)
-(global-set-key (kbd "C-<right>") 'windmove-right)
-(global-set-key (kbd "C-<down>") 'windmove-down)
-(global-set-key (kbd "C-<left>") 'windmove-left)
+(global-set-key (kbd "C-M-<up>") 'windmove-up)
+(global-set-key (kbd "C-M-<right>") 'windmove-right)
+(global-set-key (kbd "C-M-<down>") 'windmove-down)
+(global-set-key (kbd "C-M-<left>") 'windmove-left)
 #+END_SRC
 
 ** package archives
@@ -57,10 +57,15 @@ new code there into this block.
  )
 #+END_SRC
 
-* Packages
-** TODO Find more interesting packages
+* Package
 ** org-mode
 *** variables
+Set agenda files.
+#+BEGIN_SRC emacs-lisp
+(custom-set-variables
+  '(org-agenda-files '("~/workspace/todo.org")))
+#+END_SRC
+
 Disabled confirmation for inline script execution.
 #+BEGIN_SRC emacs-lisp
 (setq org-confirm-babel-evaluate nil)
@@ -74,6 +79,11 @@ Allow selection with the shift key while outside special contexts.
 Add timestamp and note when closing TODOs.
 #+BEGIN_SRC emacs-lisp
 (setq org-log-done 'note)
+#+END_SRC
+
+*** keybindings
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "C-c a") 'org-agenda)
 #+END_SRC
 
 *** babel languages
@@ -126,7 +136,9 @@ Pre-calculate gutter width in nlinum to prevent horizontal jumps when scrolling.
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-d") 'er/expand-region)
 #+END_SRC
+
 ** multiple-cursors
+*** key bindings
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "M-s M-g") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-s C-g") 'mc/mark-previous-like-this)
