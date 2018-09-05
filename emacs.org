@@ -61,8 +61,8 @@
 
 **** set agenda files
      #+BEGIN_SRC emacs-lisp
-      (custom-set-variables
-       '(org-agenda-files '("~/workspace/todo.org")))
+       (custom-set-variables
+	'(org-agenda-files '("~/workspace/todo.org")))
      #+END_SRC
 
 **** disable confirmation for inline script execution
@@ -81,6 +81,13 @@
      #+BEGIN_SRC emacs-lisp
       (custom-set-variables
        '(org-log-done 'note))
+     #+END_SRC
+
+**** set todo keywords
+     #+BEGIN_SRC emacs-lisp
+       (custom-set-variables
+	'(org-todo-keywords
+	  '((sequence "TODO" "WAITING" "|" "DONE"))))
      #+END_SRC
 
 *** keybindings
@@ -126,7 +133,7 @@
 *** initialize
    Activate nlinum globally.
    #+BEGIN_SRC emacs-lisp
-     (add-hook 'before-init-hook 'global-nlinum-mode)
+     (add-hook 'after-init-hook 'global-nlinum-mode)
    #+END_SRC
 
 *** custom hooks
