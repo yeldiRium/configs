@@ -8,6 +8,10 @@ Bind window movement to Meta+Arrow Keys
 (global-set-key (kbd "s-<left>") 'windmove-left)
 #+END_SRC
 
+#+BEGIN_SRC emacs-lisp
+(global-
+#+END_SRC
+
 ** package archives
  load emacs 24's package system. Add MELPA repository.
  #+BEGIN_SRC emacs-lisp
@@ -42,14 +46,15 @@ new code there into this block.
  '(custom-safe-themes
    (quote
     ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
- '(package-selected-packages (quote (
+ '(package-selected-packages (quote ( 
+    org
     org-sticky-header
+    company
     expand-region
     multiple-cursors
     nlinum-relative
-    htmlize 
-    monokai-theme 
-    org))))
+    htmlize
+    monokai-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -59,12 +64,7 @@ new code there into this block.
 #+END_SRC
 
 * Package
-The following packages should be installed:
-- org-mode
-  - org-sticky-headers
-- nlinum
-- expand-region
-- multiple-cursors
+Please install all packages listed under Custom config.
 
 ** org-mode
 *** variables
@@ -125,6 +125,17 @@ to be installed.
 #+BEGIN_SRC emacs-lisp
 (add-hook 'org-mode-hook 'org-sticky-header-mode)
 #+END_SRC
+** company
+Activate company globally.
+#+BEGIN_SRC emacs-lisp
+(add-hook 'after-init-hook 'global-company-mode)
+#+END_SRC
+
+*** key bindings
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "s-<return>") 'company-complete)
+#+END_SRC
+
 ** nlinum
 Activate nlinum globally.
 #+BEGIN_SRC emacs-lisp
