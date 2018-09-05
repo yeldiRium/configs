@@ -30,7 +30,6 @@
 					  htmlize 
 					  monokai-theme 
 					  org))))
-     )
    #+END_SRC
 
 ** initialize packages
@@ -46,38 +45,44 @@
       ;; If you edit it by hand, you could mess it up, so be careful.
       ;; Your init file should contain only one such instance.
       ;; If there is more than one, they won't work right.
-      '(custom-enabled-themes (quote (monokai)))
+      '(custom-enabled-themes '(monokai))
       '(custom-safe-themes
-	(quote
-	 ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
+	'("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
    #+END_SRC
 
 * Package
 ** org-mode
 *** variables
-    Set agenda files.
-    #+BEGIN_SRC emacs-lisp
+**** set export settings
+     #+BEGIN_SRC emacs-lisp
+       (custom-set-variables
+	'(user-full-name   "Hannes Leutloff")
+	'(user-mail-adress "hannes.leutloff@aol.de"))
+     #+END_SRC
+
+**** set agenda files
+     #+BEGIN_SRC emacs-lisp
       (custom-set-variables
        '(org-agenda-files '("~/workspace/todo.org")))
-    #+END_SRC
+     #+END_SRC
 
-    Disabled confirmation for inline script execution.
-    #+BEGIN_SRC emacs-lisp
+**** disable confirmation for inline script execution
+     #+BEGIN_SRC emacs-lisp
       (custom-set-variables
        '(org-confirm-babel-evaluate nil))
-    #+END_SRC
+     #+END_SRC
 
-    Allow selection with the shift key while outside special contexts.
-    #+BEGIN_SRC emacs-lisp
+**** allow selection with the shift key while outside special contexts
+     #+BEGIN_SRC emacs-lisp
       (custom-set-variables
        '(org-support-shift-select t))
-    #+END_SRC
+     #+END_SRC
 
-    Add timestamp and note when closing TODOs.
-    #+BEGIN_SRC emacs-lisp
+**** add timestamp and note when closing TODOs
+     #+BEGIN_SRC emacs-lisp
       (custom-set-variables
        '(org-log-done 'note))
-    #+END_SRC
+     #+END_SRC
 
 *** keybindings
     #+BEGIN_SRC emacs-lisp
