@@ -128,7 +128,7 @@ to be installed.
 ** nlinum
 Activate nlinum globally.
 #+BEGIN_SRC emacs-lisp
-(global-nlinum-mode)
+(add-hook 'after-init-hook 'global-nlinum-mode)
 #+END_SRC
 
 Pre-calculate gutter width in nlinum to prevent horizontal jumps when scrolling.
