@@ -1,2 +1,7 @@
-emacs.el
+# emacs temp files
 *~
+
+# emacs export formats
+_minted-emacs
+emacs.*
+!emacs.org
