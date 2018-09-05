@@ -59,6 +59,13 @@ new code there into this block.
 #+END_SRC
 
 * Package
+The following packages should be installed:
+- org-mode
+  - org-sticky-headers
+- nlinum
+- expand-region
+- multiple-cursors
+
 ** org-mode
 *** variables
 Set agenda files.
