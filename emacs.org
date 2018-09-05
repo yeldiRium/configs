@@ -8,10 +8,6 @@ Bind window movement to Meta+Arrow Keys
 (global-set-key (kbd "s-<left>") 'windmove-left)
 #+END_SRC
 
-#+BEGIN_SRC emacs-lisp
-(global-
-#+END_SRC
-
 ** package archives
  load emacs 24's package system. Add MELPA repository.
  #+BEGIN_SRC emacs-lisp
@@ -50,6 +46,7 @@ new code there into this block.
     org
     org-sticky-header
     company
+    emojify
     expand-region
     multiple-cursors
     nlinum-relative
@@ -134,6 +131,19 @@ Activate company globally.
 *** key bindings
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "s-<return>") 'company-complete)
+#+END_SRC
+
+** emojify
+Enable emojify globally.
+#+BEGIN_SRC emacs-lisp
+(add-hook 'after-init-hook 'global-emojify-mode)
+#+END_SRC
+
+*** variables
+Enable github and unicode emojis.
+#+BEGIN_SRC emacs-lisp
+(custom-set-variables
+  '(emojify-emoji-styles (quote (github unicode))))
 #+END_SRC
 
 ** nlinum
