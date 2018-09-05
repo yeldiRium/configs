@@ -1,15 +1,15 @@
 * Emacs configuration
 ** keybindings
-   Bind window movement to Meta+Arrow Keys
-   #+BEGIN_SRC emacs-lisp
-     (global-set-key (kbd "s-<up>") 'windmove-up)
-     (global-set-key (kbd "s-<right>") 'windmove-right)
-     (global-set-key (kbd "s-<down>") 'windmove-down)
-     (global-set-key (kbd "s-<left>") 'windmove-left)
-   #+END_SRC
+*** bind window movement to meta+<arrow keys>
+    #+BEGIN_SRC emacs-lisp
+      (global-set-key (kbd "s-<up>") 'windmove-up)
+      (global-set-key (kbd "s-<right>") 'windmove-right)
+      (global-set-key (kbd "s-<down>") 'windmove-down)
+      (global-set-key (kbd "s-<left>") 'windmove-left)
+    #+END_SRC
 
 ** package archives
-   load emacs 24's package system. Add MELPA repository.
+   load emacs 24's package system and ddd MELPA repository
    #+BEGIN_SRC emacs-lisp
      (when (>= emacs-major-version 24)
        (require 'package)
@@ -33,7 +33,6 @@
    #+END_SRC
 
 ** initialize packages
-   Initialize installed packages for further use.
    #+BEGIN_SRC emacs-lisp
      (package-initialize)
    #+END_SRC
@@ -85,36 +84,37 @@
      #+END_SRC
 
 *** keybindings
+**** org-agenda
     #+BEGIN_SRC emacs-lisp
       (global-set-key (kbd "C-c a") 'org-agenda)
     #+END_SRC
 
 *** babel languages
-    Activate inline evaluation for
-    - JavaScript
-    - Python
-    #+BEGIN_SRC emacs-lisp
-      (org-babel-do-load-languages
-       'org-babel-load-languages
-       '((js . t)
-	 (python . t)
-	 ))
-    #+END_SRC
+**** activate inline evaluation
+     - JavaScript
+     - Python
+     #+BEGIN_SRC emacs-lisp
+       (org-babel-do-load-languages
+	'org-babel-load-languages
+	'((js . t)
+	  (python . t)
+	  ))
+     #+END_SRC
 
-    Activate syntax highlighting in latex.
-    This requires
-    - latex
-    - minted (latex plugin)
-    - python
-    - pygments (python package)
-    to be installed.
-    #+BEGIN_SRC emacs-lisp
-      (require 'ox-latex)
-      (add-to-list 'org-latex-packages-alist '("" "minted"))
-      (custom-set-variables
-       '(org-latex-listings 'minted)
-       '(org-latex-pdf-process '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f")))
-    #+END_SRC
+**** activate syntax highlighting in latex
+     This requires
+     - latex
+     - minted (latex plugin)
+     - python
+     - pygments (python package)
+     to be installed.
+     #+BEGIN_SRC emacs-lisp
+       (require 'ox-latex)
+       (add-to-list 'org-latex-packages-alist '("" "minted"))
+       (custom-set-variables
+	'(org-latex-listings 'minted)
+	'(org-latex-pdf-process '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f")))
+     #+END_SRC
 
 ** org-sticky-headers
 *** initialize
@@ -130,17 +130,17 @@
    #+END_SRC
 
 *** custom hooks
-   Pre-calculate gutter width in nlinum to prevent horizontal jumps when scrolling.
-   #+BEGIN_SRC emacs-lisp
-     (defun my-nlinum-mode-hook ()
-       (when nlinum-mode
-	 (setq-local nlinum-format
-		     (concat "%" (number-to-string
-				  ;; Guesstimate number of buffer lines.
-				  (ceiling (log (max 1 (/ (buffer-size) 80)) 10)))
-			     "d"))))
-     (add-hook 'nlinum-mode-hook #'my-nlinum-mode-hook)
-   #+END_SRC
+**** pre-calculate gutter width in nlinum to prevent horizontal jumps when scrolling
+    #+BEGIN_SRC emacs-lisp
+      (defun my-nlinum-mode-hook ()
+	(when nlinum-mode
+	  (setq-local nlinum-format
+		      (concat "%" (number-to-string
+				   ;; Guesstimate number of buffer lines.
+				   (ceiling (log (max 1 (/ (buffer-size) 80)) 10)))
+			      "d"))))
+      (add-hook 'nlinum-mode-hook #'my-nlinum-mode-hook)
+    #+END_SRC
 
 ** expand-region
 *** key bindings
