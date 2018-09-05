@@ -43,6 +43,7 @@ new code there into this block.
    (quote
     ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
  '(package-selected-packages (quote (
+    org-sticky-header
     expand-region
     multiple-cursors
     nlinum-relative
@@ -113,6 +114,10 @@ to be installed.
       '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 #+END_SRC
 
+** org-sticky-headers
+#+BEGIN_SRC emacs-lisp
+(add-hook 'org-mode-hook 'org-sticky-header-mode)
+#+END_SRC
 ** nlinum
 Activate nlinum globally.
 #+BEGIN_SRC emacs-lisp
