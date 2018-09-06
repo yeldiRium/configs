@@ -49,6 +49,19 @@
 	'("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
    #+END_SRC
 
+** core packages
+*** whitespace-mode
+**** initialization
+     #+BEGIN_SRC emacs-lisp
+       (add-hook 'after-init-hook 'global-whitespace-mode)
+     #+END_SRC
+
+**** variables
+     #+BEGIN_SRC emacs-lisp
+       (custom-set-variables
+	'(whitespace-style '(face empty tabs lines trailing)))
+     #+END_SRC
+
 * Package
 ** org-mode
 *** variables
