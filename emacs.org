@@ -171,8 +171,8 @@
 ** multiple-cursors
 *** key bindings
     #+BEGIN_SRC emacs-lisp
-      (global-set-key (kbd "M-s M-g") 'mc/mark-next-like-this)
-      (global-set-key (kbd "M-s C-g") 'mc/mark-previous-like-this)
-      (global-set-key (kbd "M-s C-M-g") 'mc/mark-all-like-this)
+      (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+      (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+      (global-set-key (kbd "C-=") 'mc/mark-all-like-this)
     #+END_SRC
 
