@@ -87,7 +87,7 @@
      #+BEGIN_SRC emacs-lisp
        (custom-set-variables
 	'(org-todo-keywords
-	  '((sequence "TODO" "WAITING" "|" "DONE"))))
+	  '((sequence "TODO" "WAITING" "MAYBE" "DELEGATED" "|" "DONE"))))
      #+END_SRC
 
 *** keybindings
