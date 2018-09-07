@@ -70,6 +70,7 @@
 					  org-sticky-header
 					  org-web-tools
 					  org-bullets
+					  ox-reveal
 					  company
 					  expand-region
 					  multiple-cursors
@@ -223,6 +224,31 @@
 *** initialization
     #+BEGIN_SRC emacs-lisp
       (add-hook 'org-mode-hook 'org-bullets-mode)
+    #+END_SRC
+
+** ox-reveal
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      ;(ye/assert-package-installed 'ox-reveal)
+    #+END_SRC
+    The MELPA version of ox-reveal is broken as of <2018-09-07 Fri>.
+    See [[https://github.com/yjwen/org-reveal/issues/342][this Issue]].
+
+    Instead of installing from MELPA do the following:
+    - download [[https://github.com/yjwen/org-reveal/blob/master/ox-reveal.el][ox-reveal.el]] from github
+    - change org version requirement in =ox-reveal.el= to =9.1=
+    - install via =package-install-file "path/to/ex-reveal.el"=
+    - optionally delete the file
+
+*** initialization
+    #+BEGIN_SRC emacs-lisp
+      (add-hook 'org-mode-hook (lambda () (load-library "ox-reveal")))
+    #+END_SRC
+
+*** variables
+    #+BEGIN_SRC emacs-lisp
+      (custom-set-variables
+       '(org-reveal-root "http://cdn.jsdelivr.net/reveal.js/3.0.0/"))
     #+END_SRC
 
 ** company
