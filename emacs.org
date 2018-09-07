@@ -42,6 +42,7 @@
      (custom-set-variables
       '(package-selected-packages (quote (
 					  monokai-theme
+					  spaceline
 					  org
 					  org-sticky-header
 					  org-web-tools
@@ -85,7 +86,26 @@
      #+END_SRC
 
 * Package
+** various install checks
+   Install checks for packages i want to have installed, but which have no
+   dedicated configuration section.
+   These are probably configured as [[enable packages][enabled packages]].
+   #+BEGIN_SRC emacs-lisp
+     (mapcar
+      'ye/assert-package-installed
+      '(
+       monokai-theme
+       spaceline
+       org-web-tools
+       htmlize))
+   #+END_SRC
+
 ** org-mode
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'org)
+    #+END_SRC
+
 *** variables
 **** set export settings
      #+BEGIN_SRC emacs-lisp
@@ -159,70 +179,114 @@
      #+END_SRC
 
 ** org-sticky-headers
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'org-sticky-headers)
+    #+END_SRC
+
+*** initialization
    #+BEGIN_SRC emacs-lisp
      (add-hook 'org-mode-hook 'org-sticky-header-mode)
    #+END_SRC
+
 ** org-bullets
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'org-bullets)
+    #+END_SRC
+
 *** initialization
     #+BEGIN_SRC emacs-lisp
       (add-hook 'org-mode-hook 'org-bullets-mode)
     #+END_SRC
 
 ** company
-   Activate company globally.
-   #+BEGIN_SRC emacs-lisp
-     (add-hook 'after-init-hook 'global-company-mode)
-   #+END_SRC
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'company)
+    #+END_SRC
+
+*** initialization
+    Activate company globally.
+    #+BEGIN_SRC emacs-lisp
+      (add-hook 'after-init-hook 'global-company-mode)
+    #+END_SRC
 
 *** key bindings
     #+BEGIN_SRC emacs-lisp
       (global-set-key (kbd "s-<return>") 'company-complete)
     #+END_SRC
 
-** nlinum
-   Activate nlinum globally.
-   #+BEGIN_SRC emacs-lisp
-     (add-hook 'after-init-hook 'global-nlinum-mode)
-   #+END_SRC
+** nlinum-relative
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'nlinum-relative)
+    #+END_SRC
 
-   Pre-calculate gutter width in nlinum to prevent horizontal jumps when scrolling.
-   #+BEGIN_SRC emacs-lisp
-     (defun my-nlinum-mode-hook ()
-       (when nlinum-mode
-	 (setq-local nlinum-format
+*** initialization
+    Activate nlinum globally.
+    #+BEGIN_SRC emacs-lisp
+      (add-hook 'after-init-hook 'global-nlinum-mode)
+    #+END_SRC
+
+    Pre-calculate gutter width in nlinum to prevent horizontal jumps when scrolling.
+    #+BEGIN_SRC emacs-lisp
+      (defun my-nlinum-mode-hook ()
+        (when nlinum-mode
+	 (setq-local nlin um-format
 		     (concat "%" (number-to-string
 				  ;; Guesstimate number of buffer lines.
 				  (ceiling (log (max 1 (/ (buffer-size) 80)) 10)))
 			     "d"))))
      (add-hook 'nlinum-mode-hook #'my-nlinum-mode-hook)
-   #+END_SRC
+    #+END_SRC
 
 ** expand-region
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'expand-region)
+    #+END_SRC
+
 *** key bindings
     #+BEGIN_SRC emacs-lisp
       (global-set-key (kbd "C-d") 'er/expand-region)
     #+END_SRC
 
 ** multiple-cursors
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'multiple-cursors)
+    #+END_SRC
+
 *** key bindings
     #+BEGIN_SRC emacs-lisp
       (global-set-key (kbd "C->") 'mc/mark-next-like-this)
       (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
       (global-set-key (kbd "C-=") 'mc/mark-all-like-this)
     #+END_SRC
+
 ** spaceline
 *** info
     [[https://github.com/TheBB/spaceline][GitHub - TheBB/spaceline: Powerline theme from Spacemacs]]
+
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'spaceline)
+    #+END_SRC
+
 *** initialize
     #+BEGIN_SRC emacs-lisp
       (add-hook 'after-init-hook 'spaceline-emacs-theme)
     #+END_SRC
+
 ** TODO flycheck
 *** info
     On-the-fly syntax checking tool.
     [[https://github.com/flycheck/flycheck/][GitHub - flycheck/flycheck: On the fly syntax checking for GNU Emacs]]
+
 ** TODO mu4e
 *** info
     Email in emacs.
     [[http://emacs-fu.blogspot.com/2012/08/introducing-mu4e-for-email.html][emacs-fu: introducing mu4e, an e-mail client for emacs]]
     [[http://www.djcbsoftware.nl/code/mu/mu4e/Getting-mail.html#Getting-mail][Getting mail (Mu4e 1.0 user manual)]]
+
