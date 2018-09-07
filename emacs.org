@@ -26,6 +26,8 @@
 					  monokai-theme
 					  org
 					  org-sticky-header
+					  org-web-tools
+					  org-bullets
 					  company
 					  expand-region
 					  multiple-cursors
@@ -142,6 +144,12 @@
    #+BEGIN_SRC emacs-lisp
      (add-hook 'org-mode-hook 'org-sticky-header-mode)
    #+END_SRC
+** org-bullets
+*** initialization
+    #+BEGIN_SRC emacs-lisp
+      (add-hook 'org-mode-hook 'org-bullets-mode)
+    #+END_SRC
+
 ** company
    Activate company globally.
    #+BEGIN_SRC emacs-lisp
