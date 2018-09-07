@@ -50,7 +50,7 @@
 					  company
 					  expand-region
 					  multiple-cursors
-					  nlinum-relative
+					  nlinum
 					  htmlize))))
    #+END_SRC
 
@@ -178,10 +178,10 @@
 	'(org-latex-pdf-process '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f")))
      #+END_SRC
 
-** org-sticky-headers
+** org-sticky-header
 *** install check
     #+BEGIN_SRC emacs-lisp
-      (ye/assert-package-installed 'org-sticky-headers)
+      (ye/assert-package-installed 'org-sticky-header)
     #+END_SRC
 
 *** initialization
@@ -217,28 +217,16 @@
       (global-set-key (kbd "s-<return>") 'company-complete)
     #+END_SRC
 
-** nlinum-relative
+** nlinum
 *** install check
     #+BEGIN_SRC emacs-lisp
-      (ye/assert-package-installed 'nlinum-relative)
+      (ye/assert-package-installed 'nlinum)
     #+END_SRC
 
 *** initialization
     Activate nlinum globally.
     #+BEGIN_SRC emacs-lisp
       (add-hook 'after-init-hook 'global-nlinum-mode)
-    #+END_SRC
-
-    Pre-calculate gutter width in nlinum to prevent horizontal jumps when scrolling.
-    #+BEGIN_SRC emacs-lisp
-      (defun my-nlinum-mode-hook ()
-        (when nlinum-mode
-	 (setq-local nlin um-format
-		     (concat "%" (number-to-string
-				  ;; Guesstimate number of buffer lines.
-				  (ceiling (log (max 1 (/ (buffer-size) 80)) 10)))
-			     "d"))))
-     (add-hook 'nlinum-mode-hook #'my-nlinum-mode-hook)
     #+END_SRC
 
 ** expand-region
