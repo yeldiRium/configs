@@ -16,6 +16,24 @@
 	  )
 	)
     #+END_SRC
+*** move lines up/down
+    [[http://emacsredux.com/blog/2013/04/02/move-current-line-up-or-down/][Move current line up or down - Emacs Redux]]
+    #+BEGIN_SRC emacs-lisp
+      (defun move-line-up ()
+	"Move up the current line."
+	(interactive)
+	(transpose-lines 1)
+	(forward-line -2)
+	(indent-according-to-mode))
+
+      (defun move-line-down ()
+	"Move down the current line."
+	(interactive)
+	(forward-line 1)
+	(transpose-lines 1)
+	(forward-line -1)
+	(indent-according-to-mode))
+    #+END_SRC
 
 ** keybindings
 *** bind window movement to meta+<arrow keys>
@@ -24,6 +42,11 @@
       (global-set-key (kbd "s-<right>") 'windmove-right)
       (global-set-key (kbd "s-<down>") 'windmove-down)
       (global-set-key (kbd "s-<left>") 'windmove-left)
+    #+END_SRC
+*** bind [[move lines up/down][move lines up/down]]
+    #+BEGIN_SRC emacs-lisp
+      (global-set-key (kbd "M-S-<up>") 'move-line-up)
+      (global-set-key (kbd "M-S-<down>") 'move-line-down)
     #+END_SRC
 
 ** package archives
