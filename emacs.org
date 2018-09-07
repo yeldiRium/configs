@@ -23,13 +23,16 @@
    #+BEGIN_SRC emacs-lisp
      (custom-set-variables
       '(package-selected-packages (quote (
+					  monokai-theme))))
+					  org
 					  org-sticky-header
+					  company
+					  emojify
+					  company-emoji
 					  expand-region
 					  multiple-cursors
 					  nlinum-relative
-					  htmlize 
-					  monokai-theme 
-					  org))))
+					  htmlize
    #+END_SRC
 
 ** initialize packages
@@ -106,9 +109,9 @@
 
 *** keybindings
 **** org-agenda
-    #+BEGIN_SRC emacs-lisp
+     #+BEGIN_SRC emacs-lisp
       (global-set-key (kbd "C-c a") 'org-agenda)
-    #+END_SRC
+     #+END_SRC
 
 *** babel languages
 **** activate inline evaluation
@@ -167,6 +170,17 @@
       )
     #+END_SRC
 
+** TODO company-emoji
+   Add company-emoji to company backends.
+
+   #+BEGIN_SRC emacs-lisp
+     (defun --set-emoji-font (frame)
+       "Adjust the font settings of FRAME so Emacs can display emoji properly."
+       (if (eq system-type 'darwin)
+	   ;; For NS/Cocoa
+	   (set-fontset-font t 'symbol (font-spec :family "Apple Color Emoji") frame 'prepend)))
+   #+END_SRC
+
 ** nlinum
    Activate nlinum globally.
    #+BEGIN_SRC emacs-lisp
@@ -198,4 +212,3 @@
       (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
       (global-set-key (kbd "C-=") 'mc/mark-all-like-this)
     #+END_SRC
-
