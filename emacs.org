@@ -1,4 +1,22 @@
 * Emacs configuration
+** custom functions
+*** throw error if package is not installed
+    Call this function to assert that a package is installed.
+    #+BEGIN_SRC emacs-lisp
+      (defun ye/assert-package-installed (package-name)
+	"Check if the given package is installed and throw an error if not."
+	(unless (require package-name nil 'noerror)
+	  (error
+	    (format
+	      "Package %s is not installed! Please `package-install %s` to proceed."
+	      package-name
+	      package-name
+	      )
+	    )
+	  )
+	)
+    #+END_SRC
+
 ** keybindings
 *** bind window movement to meta+<arrow keys>
     #+BEGIN_SRC emacs-lisp
