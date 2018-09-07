@@ -61,7 +61,7 @@
 **** variables
      #+BEGIN_SRC emacs-lisp
        (custom-set-variables
-	'(whitespace-style '(face empty tabs lines-tail trailing)))
+	'(whitespace-style '(face tabs lines-tail trailing)))
      #+END_SRC
 
 * Package
