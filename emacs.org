@@ -109,6 +109,17 @@
 	'(whitespace-style '(face tabs lines-tail trailing)))
      #+END_SRC
 
+*** dired
+****  keybindings
+***** directory navigation
+      #+BEGIN_SRC emacs-lisp
+       (add-hook
+	'dired-mode-hook
+	(lambda ()
+	  (local-set-key (kbd "M-<down>") 'dired-find-file)
+	  (local-set-key (kbd "M-<up>") 'dired-up-directory)))
+      #+END_SRC
+
 * Package
 ** various install checks
    Install checks for packages i want to have installed, but which have no
