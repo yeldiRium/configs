@@ -91,7 +91,7 @@
    dedicated configuration section.
    These are probably configured as [[enable packages][enabled packages]].
    #+BEGIN_SRC emacs-lisp
-     (mapcar
+     (mapc
       'ye/assert-package-installed
       '(
        monokai-theme
