@@ -192,3 +192,9 @@
       (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
       (global-set-key (kbd "C-=") 'mc/mark-all-like-this)
     #+END_SRC
+** spaceline
+*** initialize
+    #+BEGIN_SRC emacs-lisp
+      (add-hook 'after-init-hook 'spaceline-emacs-theme)
+    #+END_SRC
+
