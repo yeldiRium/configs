@@ -23,14 +23,14 @@
    #+BEGIN_SRC emacs-lisp
      (custom-set-variables
       '(package-selected-packages (quote (
-					  monokai-theme))))
+					  monokai-theme
 					  org
 					  org-sticky-header
 					  company
 					  expand-region
 					  multiple-cursors
 					  nlinum-relative
-					  htmlize
+					  htmlize))))
    #+END_SRC
 
 ** initialize packages
