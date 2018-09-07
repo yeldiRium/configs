@@ -140,7 +140,9 @@
 **** set agenda files
      #+BEGIN_SRC emacs-lisp
        (custom-set-variables
-	'(org-agenda-files '("~/workspace/todo.org")))
+	'(org-agenda-files '(
+			     "~/workspace/todo.org"
+			     "~/querbeet/notes/efla.org")))
      #+END_SRC
 
 **** disable confirmation for inline script execution
