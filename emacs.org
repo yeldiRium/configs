@@ -193,8 +193,18 @@
       (global-set-key (kbd "C-=") 'mc/mark-all-like-this)
     #+END_SRC
 ** spaceline
+*** info
+    [[https://github.com/TheBB/spaceline][GitHub - TheBB/spaceline: Powerline theme from Spacemacs]]
 *** initialize
     #+BEGIN_SRC emacs-lisp
       (add-hook 'after-init-hook 'spaceline-emacs-theme)
     #+END_SRC
-
+** TODO flycheck
+*** info
+    On-the-fly syntax checking tool.
+    [[https://github.com/flycheck/flycheck/][GitHub - flycheck/flycheck: On the fly syntax checking for GNU Emacs]]
+** TODO mu4e
+*** info
+    Email in emacs.
+    [[http://emacs-fu.blogspot.com/2012/08/introducing-mu4e-for-email.html][emacs-fu: introducing mu4e, an e-mail client for emacs]]
+    [[http://www.djcbsoftware.nl/code/mu/mu4e/Getting-mail.html#Getting-mail][Getting mail (Mu4e 1.0 user manual)]]
