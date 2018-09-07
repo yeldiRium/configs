@@ -27,8 +27,6 @@
 					  org
 					  org-sticky-header
 					  company
-					  emojify
-					  company-emoji
 					  expand-region
 					  multiple-cursors
 					  nlinum-relative
@@ -154,32 +152,6 @@
     #+BEGIN_SRC emacs-lisp
       (global-set-key (kbd "s-<return>") 'company-complete)
     #+END_SRC
-
-** emojify
-   Enable emojify globally.
-   #+BEGIN_SRC emacs-lisp
-     (add-hook 'org-mode-hook 'global-emojify-mode)
-   #+END_SRC
-
-*** variables
-    Enable github and unicode emojis.
-    #+BEGIN_SRC emacs-lisp
-      (custom-set-variables
-	'(emojify-emoji-styles (quote (github unicode)))
-	'(emojify-display-style 'image)
-      )
-    #+END_SRC
-
-** TODO company-emoji
-   Add company-emoji to company backends.
-
-   #+BEGIN_SRC emacs-lisp
-     (defun --set-emoji-font (frame)
-       "Adjust the font settings of FRAME so Emacs can display emoji properly."
-       (if (eq system-type 'darwin)
-	   ;; For NS/Cocoa
-	   (set-fontset-font t 'symbol (font-spec :family "Apple Color Emoji") frame 'prepend)))
-   #+END_SRC
 
 ** nlinum
    Activate nlinum globally.
