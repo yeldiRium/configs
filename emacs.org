@@ -185,7 +185,10 @@
 *** keybindings
 **** org-agenda
      #+BEGIN_SRC emacs-lisp
-      (global-set-key (kbd "C-c a") 'org-agenda)
+       (add-hook
+	'org-mode-hook
+	(lambda ()
+	  (local-set-key (kbd "C-c a") 'org-agenda)))
      #+END_SRC
 
 *** babel languages
@@ -339,4 +342,3 @@
     Email in emacs.
     [[http://emacs-fu.blogspot.com/2012/08/introducing-mu4e-for-email.html][emacs-fu: introducing mu4e, an e-mail client for emacs]]
     [[http://www.djcbsoftware.nl/code/mu/mu4e/Getting-mail.html#Getting-mail][Getting mail (Mu4e 1.0 user manual)]]
-
