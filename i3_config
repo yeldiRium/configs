@@ -34,20 +34,19 @@ set $tag1 1: net
 set $tag2 2: var
 set $tag3 3: dev
 set $tag4 4: dev
-set $tag5 5
-set $tag6 6
-set $tag7 7: orga
-set $tag8 8: social
-set $tag9 9
-set $tag10 10
+set $tag5 5: ~
+set $tag6 6: ~
+set $tag7 7
+set $tag8 8
+set $tag9 9: comm
+set $tag10 10: media
 
-assign [class="Thunderbird"] $tag7
+assign [class="Thunderbird"] $tag9
+assign [class="telegram-desktop"] $tag9
 assign [class="Spotify"] $tag10
 assign [class="mirage"] $tag10
 assign [class="vlc"] $tag10
 assign [title="ncmpcpp 0.7.3"] $tag10
-assign [class="Homebank"] $tag7
-assign [class="telegram-desktop"] $tag8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -238,4 +237,4 @@ smart_gaps on
 # TODO: autostart
 exec pasystray
 exec thunderbird
-
+exec telegram-desktop
