@@ -1,40 +1,44 @@
-* Emacs configuration
-** custom functions
-*** throw error if package is not installed
-    Call this function to assert that a package is installed.
-    #+BEGIN_SRC emacs-lisp
-      (defun ye/assert-package-installed (package-name)
-	"Check if the given package is installed and throw an error if not."
-	(unless (require package-name nil 'noerror)
-	  (error
-	    (format
-	      "Package %s is not installed! Please `package-install %s` to proceed."
-	      package-name
-	      package-name
-	      )
-	    )
-	  )
-	)
-    #+END_SRC
-*** move lines up/down
-    [[http://emacsredux.com/blog/2013/04/02/move-current-line-up-or-down/][Move current line up or down - Emacs Redux]]
-    #+BEGIN_SRC emacs-lisp
-      (defun move-line-up ()
-	"Move up the current line."
-	(interactive)
-	(transpose-lines 1)
-	(forward-line -2)
-	(indent-according-to-mode))
+#+TITLE: Emacs Configuration
+#+OPTIONS: H:3
+#+OPTIONS: toc:2
 
-      (defun move-line-down ()
-	"Move down the current line."
-	(interactive)
-	(forward-line 1)
-	(transpose-lines 1)
-	(forward-line -1)
-	(indent-according-to-mode))
-    #+END_SRC
+* custom functions
+** assert that package is installed
+   #+BEGIN_SRC emacs-lisp
+     (defun ye/assert-package-installed (package-name)
+       "Check if the given package is installed and throw an error if not."
+       (unless (require package-name nil 'noerror)
+	 (error
+	   (format
+	     "Package %s is not installed! Please `package-install %s` to proceed."
+	     package-name
+	     package-name
+	     )
+	   )
+	 )
+       )
+   #+END_SRC
 
+** move lines up/down
+   [[http://emacsredux.com/blog/2013/04/02/move-current-line-up-or-down/][Move current line up or down - Emacs Redux]]
+   #+BEGIN_SRC emacs-lisp
+     (defun move-line-up ()
+       "Move up the current line."
+       (interactive)
+       (transpose-lines 1)
+       (forward-line -2)
+       (indent-according-to-mode))
+
+     (defun move-line-down ()
+       "Move down the current line."
+       (interactive)
+       (forward-line 1)
+       (transpose-lines 1)
+       (forward-line -1)
+       (indent-according-to-mode))
+   #+END_SRC
+
+* emacs configuration
 ** keybindings
 *** bind window movement to meta+<arrow keys>
     #+BEGIN_SRC emacs-lisp
@@ -43,6 +47,7 @@
       (global-set-key (kbd "s-<down>") 'windmove-down)
       (global-set-key (kbd "s-<left>") 'windmove-left)
     #+END_SRC
+
 *** bind [[move lines up/down][move lines up/down]]
     #+BEGIN_SRC emacs-lisp
       (global-set-key (kbd "M-S-<up>") 'move-line-up)
@@ -50,7 +55,7 @@
     #+END_SRC
 
 ** package archives
-   load emacs 24's package system and ddd MELPA repository
+   Load emacs 24's package system and add MELPA repository.
    #+BEGIN_SRC emacs-lisp
      (when (>= emacs-major-version 24)
        (require 'package)
@@ -96,33 +101,39 @@
 	'("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
    #+END_SRC
 
-** core packages
-*** whitespace-mode
-**** initialization
-     #+BEGIN_SRC emacs-lisp
-       (add-hook 'after-init-hook 'global-whitespace-mode)
-     #+END_SRC
+* core packages
+** whitespace-mode
+*** initialization
+    #+BEGIN_SRC emacs-lisp
+      (add-hook 'after-init-hook 'global-whitespace-mode)
+    #+END_SRC
 
-**** variables
-     #+BEGIN_SRC emacs-lisp
-       (custom-set-variables
-	'(whitespace-style '(face tabs lines-tail trailing)))
-     #+END_SRC
+*** variables
+    #+BEGIN_SRC emacs-lisp
+      (custom-set-variables
+       '(whitespace-style '(face tabs lines-tail trailing)))
+    #+END_SRC
 
-*** dired
-****  keybindings
-***** directory navigation
-      #+BEGIN_SRC emacs-lisp
-       (add-hook
-	'dired-mode-hook
-	(lambda ()
-	  (local-set-key (kbd "M-<down>") 'dired-find-file)
-	  (local-set-key (kbd "M-<up>") 'dired-up-directory)))
-      #+END_SRC
+** dired
+***  keybindings
+    #+BEGIN_SRC emacs-lisp
+     (add-hook
+      'dired-mode-hook
+      (lambda ()
+	(local-set-key (kbd "M-<down>") 'dired-find-file)
+	(local-set-key (kbd "M-<up>") 'dired-up-directory)))
+    #+END_SRC
 
-* Package
+** docview
+*** variables
+    #+BEGIN_SRC emacs-lisp
+      (custom-set-variables
+       '(doc-view-continuous t))
+    #+END_SRC
+
+* external packages
 ** various install checks
-   Install checks for packages i want to have installed, but which have no
+   Install checks for packages I want to have installed, but which have no
    dedicated configuration section.
    These are probably configured as [[enable packages][enabled packages]].
    #+BEGIN_SRC emacs-lisp
@@ -243,7 +254,7 @@
 ** ox-reveal
 *** install check
     #+BEGIN_SRC emacs-lisp
-      ;(ye/assert-package-installed 'ox-reveal)
+      (ye/assert-package-installed 'ox-reveal)
     #+END_SRC
     The MELPA version of ox-reveal is broken as of <2018-09-07 Fri>.
     See [[https://github.com/yjwen/org-reveal/issues/342][this Issue]].
