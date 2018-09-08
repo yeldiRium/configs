@@ -343,6 +343,31 @@
       (add-hook 'after-init-hook 'spaceline-emacs-theme)
     #+END_SRC
 
+** web-mode
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'web-mode)
+    #+END_SRC
+
+*** variables
+    Use web-mode in html files.
+    #+BEGIN_SRC emacs-lisp
+      (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+    #+END_SRC
+
+** emmet-mode
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'emmet-mode)
+    #+END_SRC
+
+*** initialization
+    Sgml contains html, xml and other markup languages.
+    #+BEGIN_SRC emacs-lisp
+      (add-hook 'web-mode-hook 'emmet-mode)
+      (add-hook 'web-mode-hook 'emmet-mode)
+    #+END_SRC
+
 ** TODO flycheck
 *** info
     On-the-fly syntax checking tool.
