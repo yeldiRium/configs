@@ -201,6 +201,13 @@
 	(lambda ()
 	  (local-set-key (kbd "C-c a") 'org-agenda)))
      #+END_SRC
+**** org-store-link
+     #+BEGIN_SRC emacs-lisp
+       (add-hook
+	'org-mode-hook
+	(lambda ()
+	  (local-set-key (kbd "C-c l") 'org-store-link)))
+     #+END_SRC
 
 *** babel languages
 **** activate inline evaluation
