@@ -376,6 +376,7 @@
 *** info
     Emmet-mode enables templating strings of the form "html>head>title", which
     can be expanded into html markup.
+
 *** install check
     #+BEGIN_SRC emacs-lisp
       (ye/assert-package-installed 'emmet-mode)
@@ -386,6 +387,13 @@
     #+BEGIN_SRC emacs-lisp
       (add-hook 'web-mode-hook 'emmet-mode)
       (add-hook 'web-mode-hook 'emmet-mode)
+    #+END_SRC
+
+** magit
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'ghub)
+      (ye/assert-package-installed 'magit)
     #+END_SRC
 
 ** TODO flycheck
