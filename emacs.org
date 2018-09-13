@@ -401,12 +401,6 @@
       (ye/assert-package-installed 'magit)
     #+END_SRC
 
-*** keybinding
-**** magit-status global shortcut
-     #+BEGIN_SRC emacs-lisp
-       (global-set-key (kbd "S-x g") 'magit-status)
-     #+END_SRC
-
 ** TODO flycheck
 *** info
     On-the-fly syntax checking tool.
