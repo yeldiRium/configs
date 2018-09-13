@@ -54,6 +54,11 @@
       (global-set-key (kbd "M-S-<down>") 'move-line-down)
     #+END_SRC
 
+*** bind revert-buffer to meta-r
+    #+BEGIN_SRC emacs-lisp
+      (global-set-key (kbd "M-r") 'revert-buffer)
+    #+END_SRC
+
 *** osx special
     #+BEGIN_SRC emacs-lisp
       (custom-set-variables
