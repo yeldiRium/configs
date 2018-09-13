@@ -394,6 +394,12 @@
       (add-hook 'web-mode-hook 'emmet-mode)
     #+END_SRC
 
+** yaml-mode
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'yaml-mode)
+    #+END_SRC
+
 ** magit
 *** install check
     #+BEGIN_SRC emacs-lisp
