@@ -65,6 +65,11 @@
        '(ns-right-alternate-modifier 'none))
     #+END_SRC
 
+*** global magit binding
+    #+BEGIN_SRC emacs-lisp
+      (global-set-key (kbd "C-x g") 'magit-status)
+    #+END_SRC
+
 ** package archives
    Load emacs 24's package system and add MELPA repository.
    #+BEGIN_SRC emacs-lisp
