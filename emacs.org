@@ -299,6 +299,15 @@
        '(org-reveal-root "http://cdn.jsdelivr.net/reveal.js/3.0.0/"))
     #+END_SRC
 
+** ox-textile
+*** info
+    provides org export to textile format
+
+*** install check
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'ox-textile)
+    #+END_SRC
+
 ** company
 *** install check
     #+BEGIN_SRC emacs-lisp
