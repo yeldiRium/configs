@@ -52,6 +52,12 @@ bindkey "^R" history-incremental-pattern-search-backward
 alias ls='ls --color=auto'
 alias ll='ls -al'
 
+function cd_up() {
+  cd $(printf "%0.s../" $(seq 1 $1 ));
+}
+alias 'cd..'='cd_up'
+
+
 eval $(thefuck --alias)
 
 # git
