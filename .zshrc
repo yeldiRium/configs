@@ -93,6 +93,8 @@ alias gourceFull='gource efla-web/ --seconds-per-day 1 --file-idle-time 0 --titl
 # add npm-do for executing local packages
 function npm-do { (PATH=$(npm bin):$PATH; eval $@;) }
 
+source ~/.secret
+
 ###-begin-npm-completion-###
 #
 # npm command completion script
