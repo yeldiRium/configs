@@ -420,7 +420,12 @@
       (ye/assert-package-installed 'ghub)
       (ye/assert-package-installed 'magit)
     #+END_SRC
-
+*** config
+    #+BEGIN_SRC emacs-lisp
+       '(magit-commit-arguments
+	 (quote
+	  ("--gpg-sign=11B87CD2FC7C637C1784910D4F85FF8648EBF971")))
+    #+END_SRC
 ** TODO flycheck
 *** info
     On-the-fly syntax checking tool.
