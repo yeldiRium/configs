@@ -88,7 +88,7 @@ function gourceVid() {
 	gource $1 --seconds-per-day 1 --file-idle-time 0 --title "Ste3k101" --key -1920x1080 -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 20 -threads 0 -bf 0 $2
 }
 
-alias gourceFull='gource efla-web/ --seconds-per-day 1 --file-idle-time 0 --title "Ste3k101" --key -1920x1080 -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 20 -threads 0 -bf 0 gource.mp4'
+alias gourceFull='gource ~/workspace/projects/efla-web/ --seconds-per-day 1 --file-idle-time 0 --title "Ste3k101" --key -1920x1080 -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 20 -threads 0 -bf 0 gource.mp4'
 
 # add npm-do for executing local packages
 function npm-do { (PATH=$(npm bin):$PATH; eval $@;) }
