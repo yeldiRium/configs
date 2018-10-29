@@ -39,6 +39,17 @@
    #+END_SRC
 
 * emacs configuration
+** Backup files
+   #+BEGIN_SRC emacs-lisp
+     (setq
+	backup-by-copying t      ; don't clobber symlinks
+	backup-directory-alist
+	 '(("." . "~/.emacs.d/backups/"))    ; don't litter my fs tree
+	delete-old-versions t
+	kept-new-versions 6
+	kept-old-versions 2
+	version-control t)       ; use versioned backups
+   #+END_SRC
 ** keybindings
 *** bind window movement to meta+<arrow keys>
     #+BEGIN_SRC emacs-lisp

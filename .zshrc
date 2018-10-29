@@ -40,6 +40,9 @@ setopt LIST_ROWS_FIRST
 setopt AUTO_CD
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# important environment
+export LAUNCHPAD_CHROME=/usr/bin/google-chrome-stable
+
 # movement
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
