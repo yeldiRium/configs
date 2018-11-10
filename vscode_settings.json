@@ -17,8 +17,6 @@
     ],
 
     "editor.showFoldingControls": "always",
-
-    "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 80,
 
     "diffEditor.ignoreTrimWhitespace": false,
@@ -106,5 +104,7 @@
     "latex-workshop.view.pdf.viewer": "tab",
 
     "tslint.autoFixOnSave": true,
-    "tslint.packageManager": "yarn"
+    "tslint.packageManager": "yarn",
+    "eslint.autoFixOnSave": true,
+    "tslint.enable": false
 }
