@@ -8,6 +8,7 @@ plugins=(
 	pip # completion
 	python # completion
 	wd # efficient directory switching
+	mix # mix tool completions
 )
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
