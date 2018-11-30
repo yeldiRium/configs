@@ -207,12 +207,6 @@
        '(org-support-shift-select t))
      #+END_SRC
 
-**** add timestamp and note when closing TODOs
-     #+BEGIN_SRC emacs-lisp
-      (custom-set-variables
-       '(org-log-done 'note))
-     #+END_SRC
-
 **** set todo keywords
      #+BEGIN_SRC emacs-lisp
        (custom-set-variables
