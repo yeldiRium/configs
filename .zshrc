@@ -84,7 +84,7 @@ alias phpunitip='phpunit --process-isolation'
 
 # utility
 alias ll='ls -al'
-alias dchome='xrandr --output LVDS-1 --off --output VGA-1 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-2 --primary --mode 1920x1080 --pos 1080x376'
+alias dchome='xrandr --output LVDS-1 --off --output VGA-1 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-2 --primary --mode 1920x1080 --pos -1920x376'
 alias dcmobile='xrandr --output HDMI-2 --off --output VGA-1 --off --output LVDS-1 --auto --primary'
 
 # gource
