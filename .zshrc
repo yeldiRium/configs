@@ -50,7 +50,7 @@ bindkey "^[[1;5C" forward-word
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
 bindkey "^[[3~" delete-char
-bindkey "^R" history-incremental-pattern-search-backward
+#bindkey "^R" history-incremental-pattern-search-backward
 
 # aliases
 alias ls='ls --color=auto'
@@ -159,3 +159,10 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+# HSTR configuration - add this to ~/.bashrc
+alias hh=hstr                    # hh to be alias for hstr
+export HISTFILE=~/.zsh_history  # ensure history file visibility
+export HSTR_CONFIG=hicolor        # get more colors
+bindkey -s "\C-r" "hstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc)
+
