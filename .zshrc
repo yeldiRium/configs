@@ -3,6 +3,7 @@ ZSH_THEME="avit"
 plugins=(
 	cabal # completion for haskell build tool cabal
 	docker # completion
+	kubectl # aliases and completion
 	npm # completion
 	git # a LOT of aliases for git
 	pip # completion
@@ -166,3 +167,4 @@ export HISTFILE=~/.zsh_history  # ensure history file visibility
 export HSTR_CONFIG=hicolor        # get more colors
 bindkey -s "\C-r" "hstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
+source /usr/share/nvm/init-nvm.sh
