@@ -107,5 +107,6 @@
     "tslint.packageManager": "yarn",
     "eslint.autoFixOnSave": true,
     "tslint.enable": false,
-    "elixirLS.dialyzerEnabled": false
+    "elixirLS.dialyzerEnabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }
