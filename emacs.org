@@ -432,15 +432,6 @@
 	 (quote
 	  ("--gpg-sign=11B87CD2FC7C637C1784910D4F85FF8648EBF971")))
     #+END_SRC
-** emojify
-*** install check
-    #+BEGIN_SRC emacs-lisp
-      (ye/assert-package-installed 'emojify)
-    #+END_SRC
-*** config
-    #+BEGIN_SRC emacs-lisp
-      (add-hook 'after-init-hook #'global-emojify-mode)
-    #+END_SRC
 ** TODO flycheck
 *** info
     On-the-fly syntax checking tool.
