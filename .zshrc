@@ -1,4 +1,4 @@
-ZSH=~/.oh-my-zsh/
+ZSH=/usr/share/oh-my-zsh/
 ZSH_THEME="avit"
 plugins=(
 	docker # completion
