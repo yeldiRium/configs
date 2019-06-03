@@ -44,6 +44,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # important environment
 export LAUNCHPAD_CHROME=/usr/bin/google-chrome-stable
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # movement
 bindkey "^[[1;5D" backward-word
@@ -51,7 +53,6 @@ bindkey "^[[1;5C" forward-word
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
 bindkey "^[[3~" delete-char
-#bindkey "^R" history-incremental-pattern-search-backward
 
 # aliases
 alias ls='ls --color=auto'
@@ -68,37 +69,19 @@ eval $(thefuck --alias)
 # git
 alias amend='git commit --amend'
 alias amendno='git commit --amend --no-edit'
-alias pull='git pull --rebase'
-alias log='git log --oneline --decorate'
-
-# dev
-alias phpspec='php vendor/bin/phpspec'
-alias java-open='archlinux-java set java-8-openjdk'
-alias java-oracle='archlinux-java set java-8-jdk'
-
-## symfony
-alias startsymfony='php bin/console server:start'
-alias stopsymfony='php bin/console server:stop'
-
-## php
-alias phpunitip='phpunit --process-isolation'
 
 # utility
 alias ll='ls -al'
 alias dchome='xrandr --output LVDS-1 --off --output VGA-1 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-2 --primary --mode 1920x1080 --pos -1920x376'
 alias dcmobile='xrandr --output HDMI-2 --off --output VGA-1 --off --output LVDS-1 --auto --primary'
 
-# gource
-function gourceVid() {
-	gource $1 --seconds-per-day 1 --file-idle-time 0 --title "Ste3k101" --key -1920x1080 -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 20 -threads 0 -bf 0 $2
-}
-
-alias gourceFull='gource ~/workspace/projects/efla-web/ --seconds-per-day 1 --file-idle-time 0 --title "Ste3k101" --key -1920x1080 -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 20 -threads 0 -bf 0 gource.mp4'
-
 # add npm-do for executing local packages
 function npm-do { (PATH=$(npm bin):$PATH; eval $@;) }
 
 source ~/.secret
+
+# kubectl autocompletion
+source <(kubectl completion zsh)
 
 ###-begin-npm-completion-###
 #
