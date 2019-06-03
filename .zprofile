@@ -6,8 +6,6 @@
 
 export PATH=~/tools/:$PATH
 
-export TERMINAL=mate-terminal
-
 export EDITOR=vim
 export GIT_EDITOR=vim
 
