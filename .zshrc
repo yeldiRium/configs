@@ -1,7 +1,6 @@
 ZSH=~/.oh-my-zsh/
 ZSH_THEME="avit"
 plugins=(
-	cabal # completion for haskell build tool cabal
 	docker # completion
 	kubectl # aliases and completion
 	npm # completion
@@ -9,7 +8,6 @@ plugins=(
 	pip # completion
 	python # completion
 	wd # efficient directory switching
-	mix # mix tool completions
 )
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
