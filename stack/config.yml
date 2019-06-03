@@ -1,9 +1,0 @@
-# The following parameters are used by "stack new" to automatically fill fields
-# in the cabal config. We recommend uncommenting them and filling them out if
-# you intend to use 'stack new'.
-# See https://docs.haskellstack.org/en/stable/yaml_configuration/#templates
-templates:
-  params:
-    author-email: hannes.leutloff@aol.de
-    author-name: Hannes Leutloff
-    github-username: yeldiRium
