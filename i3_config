@@ -41,11 +41,11 @@ set $tag8 8
 set $tag9 9: comm
 set $tag10 10: media
 
+assign [class="kphotoalbum"] $tag6
 assign [class="Thunderbird"] $tag9
 assign [class="telegram-desktop"] $tag9
 assign [class="Spotify"] $tag10
 assign [class="mirage"] $tag10
-assign [class="vlc"] $tag10
 assign [title="ncmpcpp 0.7.3"] $tag10
 
 # Use Mouse+$mod to drag floating windows to their wanted position

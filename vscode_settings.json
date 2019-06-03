@@ -108,5 +108,7 @@
     "eslint.autoFixOnSave": true,
     "tslint.enable": false,
     "elixirLS.dialyzerEnabled": false,
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "go.buildOnSave": "off",
+    "go.formatTool": "gofmt"
 }
