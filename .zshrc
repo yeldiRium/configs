@@ -1,5 +1,5 @@
 ZSH=~/.oh-my-zsh/
-ZSH_THEME="avit"
+ZSH_THEME="avit-custom"
 plugins=(
 	docker # completion
 	kubectl # aliases and completion
@@ -24,6 +24,7 @@ zstyle :compinstall filename '/home/yeldir/.zshrc'
 
 autoload -Uz compinit
 compinit
+
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
