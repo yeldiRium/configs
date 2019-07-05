@@ -9,15 +9,15 @@ set $down a
 set $left i
 set $right e
 
-set $tag1 1: net
-set $tag2 2: var
-set $tag3 3: dev
-set $tag4 4: dev
-set $tag5 5: ~
-set $tag6 6: ~
-set $tag7 7
-set $tag8 8
-set $tag9 9: comm
+set $tag1 "1"
+set $tag2 "2"
+set $tag3 "3"
+set $tag4 "4"
+set $tag5 "5"
+set $tag6 "6"
+set $tag7 "7"
+set $tag8 "8"
+set $tag9 "9"
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>

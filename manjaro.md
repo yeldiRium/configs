@@ -102,6 +102,10 @@ manual installation
 
 This is later loaded in .zshrc
 
+### JDK
+
+`jdk-openjdk` via official repositories
+
 ### docker & docker-compose
 
 - install from manjaro repositories
@@ -152,3 +156,11 @@ ln -s $CONFIGS/vscode_settings.json ~/.config/Code/User/settings.json
 
 - install atom
 - symlink keymap (`ln -s $CONFIGS/.atom/keymap.cson ~/.atom/keymap.cson`)
+
+## install pulseaudio
+
+from official repos:
+
+- pulseaudio
+- pulseaudio-alsa
+- pulseaudio-bluetooth
