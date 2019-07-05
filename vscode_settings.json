@@ -110,5 +110,7 @@
     "elixirLS.dialyzerEnabled": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "go.buildOnSave": "off",
-    "go.formatTool": "gofmt"
+    "go.formatTool": "gofmt",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }

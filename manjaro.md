@@ -109,6 +109,15 @@ This is later loaded in .zshrc
 ### docker & docker-compose
 
 - install from manjaro repositories
+- add self to docker group (`sudo usermod -a -G docker $USER`)
+- allow docker group sudo-less docker usage:
+
+```
+> sudo visudo
+
+# add line to end of file:
+%docker ALL=NOPASSWD: /usr/bin/docker
+```
 
 ### kubectl
 
