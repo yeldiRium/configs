@@ -15,6 +15,18 @@ sudo pacman-key --refresh-keys
 
 # update system
 sudo pacman -Syyu
+
+# restart system
+systemctl reboot
+```
+
+## Deactivate Hardware Speaker
+
+```
+# only necessary on laptops and weird towers
+rmmod pcspkr
+
+sudo ln -s $CONFIGS/modprobe.d/nobeep.conf /etc/modprobe.d/nobeep.conf
 ```
 
 ## Enable AUR
@@ -105,7 +117,7 @@ This is later loaded in .zshrc
   - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
 - https://forum.manjaro.org/t/how-to-setup-oh-my-zsh-in-manjaro/34519
-- symlink .zshrc and .profile and adjust them
+- symlink .zshrc and .zshenv and adjust them
 - create warp points
   - querbeet
   - workspace
@@ -117,13 +129,24 @@ This is later loaded in .zshrc
 - install from manjaro repo
 - `echo '(org-babel-load-file "~/querbeet/workspace/configs/emacs.org")' > ~/.emacs.d/init.el`
 - start emacs
-- install all packages (`Alt+x install-package <name>`)
+- install all packages (`Alt+x package-install <name>`)
 
 ## Install various programs
 
 - chrome
 - firefox
 - tor
+
+## Install and configure VSCode
+
+install visual-studio-code-bin from AUR, then
+
+```
+# symlink keybindings
+ln -s $CONFIGS/vscode_keybindings.json ~/.config/Code/User/keybindings.json
+# symlink settings
+ln -s $CONFIGS/vscode_settings.json ~/.config/Code/User/settings.json
+```
 
 ## Install and configure Atom
 
