@@ -66,7 +66,8 @@ For access to keychain USB-stick.
 - clone from https://github.com/yeldiRium/configs to ~/querbeet/workspace/configs
 - set `$CONFIGS=~/querbeet/workspace/configs`
 - `touch ~/.secret`
-- symlink i3config
+- symlink i3config `ln -s $CONFIGS/i3_config ~/.i3/config`
+  - and i3status config `ln -s $CONFIGS/i3status_config ~/.config/i3status/config`
   - optionall put a lockscreen wallpaper into `~/querbeet/gfx/wallpaper/lockscreen.png`
 - `ln -s $CONFIGS/.gitignore ~/.gitignore`
 - `ln -s $CONFIGS/.configs/mimeapps.list ~/.configs/mimeapps.list` (overwrite existing)
