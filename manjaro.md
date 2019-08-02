@@ -70,6 +70,7 @@ For access to keychain USB-stick.
   - and i3status config `ln -s $CONFIGS/i3status_config ~/.config/i3status/config`
   - optionall put a lockscreen wallpaper into `~/querbeet/gfx/wallpaper/lockscreen.png`
 - `ln -s $CONFIGS/.gitignore ~/.gitignore`
+  - `git config --global core.excludesfile ~/.gitignore`
 - `ln -s $CONFIGS/.configs/mimeapps.list ~/.configs/mimeapps.list` (overwrite existing)
 
 ### Setup Git configuration
