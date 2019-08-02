@@ -1,124 +1,121 @@
 {
-    "editor.cursorStyle": "underline",
-
-    "editor.cursorBlinking": "phase",
-
-    "editor.minimap.maxColumn": 80,
-
-    "editor.renderControlCharacters": true,
-
-    "editor.renderLineHighlight": "all",
-
-    "editor.renderWhitespace": "all",
-
-    "editor.rulers": [
-        50,
-        80
-    ],
-
-    "editor.showFoldingControls": "always",
-    "editor.wordWrapColumn": 80,
-
-    "diffEditor.ignoreTrimWhitespace": false,
-
-    "files.autoSave": "on",
-
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/.idea": true
+  "editor.cursorStyle": "underline",
+  "editor.cursorBlinking": "phase",
+  "editor.minimap.maxColumn": 80,
+  "editor.renderControlCharacters": true,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [
+    50,
+    80
+  ],
+  "editor.showFoldingControls": "always",
+  "editor.wordWrapColumn": 80,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "files.autoSave": "off",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.idea": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "keyboard.dispatch": "keyCode",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex -> bibtex -> pdflatex*2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
     },
-
-    "files.insertFinalNewline": true,
-
-    "files.trimTrailingWhitespace": true,
-
-    "keyboard.dispatch": "keyCode",
-
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "pdflatex -> bibtex -> pdflatex*2",
-            "tools": [
-                "pdflatex",
-                "bibtex",
-                "pdflatex",
-                "pdflatex"
-            ]
-        },
-        {
-            "name": "xelatex -> bibtex -> xelatex*2",
-            "tools": [
-                "xelatex",
-                "bibtex",
-                "xelatex",
-                "xelatex"
-            ]
-        },
-        {
-            "name": "latexmk",
-            "tools": [
-                "latexmk"
-            ]
-        }
-    ],
-    "latex-workshop.latex.tools": [
-        {
-            "name": "latexmk",
-            "command": "latexmk",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-pdf",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "pdflatex",
-            "command": "pdflatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "xelatex",
-            "command": "xelatex",
-            "args": [
-                "%DOC%"
-            ]
-        }
-    ],
-    "latex-workshop.view.pdf.viewer": "tab",
-
-    "tslint.autoFixOnSave": true,
-    "tslint.packageManager": "yarn",
-    "eslint.autoFixOnSave": true,
-    "tslint.enable": false,
-    "elixirLS.dialyzerEnabled": false,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "go.buildOnSave": "off",
-    "go.formatTool": "gofmt",
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "name": "xelatex -> bibtex -> xelatex*2",
+      "tools": [
+        "xelatex",
+        "bibtex",
+        "xelatex",
+        "xelatex"
+      ]
     },
-    "editor.formatOnSave": true,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "name": "latexmk",
+      "tools": [
+        "latexmk"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOC%"
+      ]
     },
-    "explorer.openEditors.visible": 0
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.view.pdf.viewer": "tab",
+  "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.options": {
+    "extensions": [
+      "javascript",
+      "typescript"
+    ]
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
+  "elixirLS.dialyzerEnabled": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "go.buildOnSave": "off",
+  "go.formatTool": "gofmt",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "explorer.openEditors.visible": 0,
+  "languageServerHaskell.enableHIE": false,
+  "editor.formatOnSave": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
