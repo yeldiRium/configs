@@ -107,7 +107,6 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "explorer.openEditors.visible": 0,
-  "languageServerHaskell.enableHIE": false,
   "editor.formatOnSave": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -117,5 +116,8 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[haskell]": {
+    "editor.defaultFormatter": "sergey-kintsel.haskell-formatter-vscode-extension"
   }
 }
