@@ -7,6 +7,11 @@ export BROWSER=/usr/bin/google-chrome-unstable
 
 export PATH=~/querbeet/workspace/tools/:~/.local/bin:$PATH
 
+# HSTR configuration
+export HSTR_CONFIG=hicolor
+export HSTR_CONFIG=raw-history-view
+export HSTR_CONFIG=keywords-matching
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
