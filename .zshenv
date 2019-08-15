@@ -20,6 +20,8 @@ export HSTR_CONFIG=raw-history-view
 export HSTR_CONFIG=keywords-matching
 export HISTORY_IGNORE="hstr:$HISTORY_IGNORE"
 
+source ~/.secretenv
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
