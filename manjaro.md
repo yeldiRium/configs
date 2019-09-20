@@ -139,6 +139,10 @@ This is later loaded in .zshrc
   - configs
   - stuff
 
+## URXVT
+
+- install `resize-font` extension from https://github.com/simmel/urxvt-resize-font/ to ~/.urxvt/ext
+
 ## Emacs
 
 - install from manjaro repo
