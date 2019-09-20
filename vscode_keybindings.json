@@ -253,5 +253,13 @@
     "key": "ctrl+l",
     "command": "-center-editor-window.center",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+t",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "shift+alt+t",
+    "command": "workbench.action.terminal.toggleTerminal"
   }
 ]

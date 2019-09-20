@@ -23,7 +23,6 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "keyboard.dispatch": "keyCode",
   "latex-workshop.latex.recipes": [
     {
       "name": "pdflatex -> bibtex -> pdflatex*2",
@@ -89,7 +88,6 @@
   ],
   "latex-workshop.view.pdf.viewer": "tab",
   "eslint.alwaysShowStatus": true,
-  "eslint.autoFixOnSave": true,
   "eslint.options": {
     "extensions": [
       "javascript",
@@ -107,17 +105,22 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "explorer.openEditors.visible": 0,
-  "editor.formatOnSave": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[haskell]": {
     "editor.defaultFormatter": "sergey-kintsel.haskell-formatter-vscode-extension"
-  }
+  },
+  "keyboard.dispatch": "keyCode",
+  "[css]": {},
+  "css.validate": false,
+  "languageServerHaskell.enableHIE": false,
+  "eslint.autoFixOnSave": true,
+  "editor.mouseWheelZoom": true
 }
