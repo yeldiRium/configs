@@ -98,7 +98,6 @@
     "javascript",
     "typescript"
   ],
-  "elixirLS.dialyzerEnabled": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "go.buildOnSave": "off",
   "go.formatTool": "gofmt",
@@ -122,5 +121,14 @@
   "css.validate": false,
   "languageServerHaskell.enableHIE": false,
   "eslint.autoFixOnSave": true,
-  "editor.mouseWheelZoom": true
+  "editor.mouseWheelZoom": true,
+  "workbench.colorTheme": "Nord",
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.showTabs": true
 }
