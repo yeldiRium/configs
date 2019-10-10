@@ -146,7 +146,8 @@ This is later loaded in .zshrc
 ## Emacs
 
 - install from manjaro repo
-- `echo '(org-babel-load-file "~/querbeet/workspace/configs/emacs.org")' > ~/.emacs.d/init.el`
+- `ls -s $CONFIGS/.emacs.d/init.el ~/.emacs.d/init.el`
+- maybe adjust the path in `init.el`, probably not
 - start emacs
 - install all packages (`Alt+x package-install <name>`)
 
