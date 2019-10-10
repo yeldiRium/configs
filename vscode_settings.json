@@ -130,5 +130,6 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.editor.showTabs": true
+  "workbench.editor.showTabs": true,
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
