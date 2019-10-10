@@ -76,11 +76,6 @@
        '(ns-right-alternate-modifier 'none))
     #+END_SRC
 
-*** global magit binding
-    #+BEGIN_SRC emacs-lisp
-      (global-set-key (kbd "C-x g") 'magit-status)
-    #+END_SRC
-
 ** package archives
    Load emacs 24's package system and add MELPA repository.
    #+BEGIN_SRC emacs-lisp
@@ -432,6 +427,11 @@
 	 (quote
 	  ("--gpg-sign=11B87CD2FC7C637C1784910D4F85FF8648EBF971")))
     #+END_SRC
+*** global magit binding
+    #+BEGIN_SRC emacs-lisp
+      (global-set-key (kbd "C-x g") 'magit-status)
+    #+END_SRC
+
 ** TODO flycheck
 *** info
     On-the-fly syntax checking tool.
