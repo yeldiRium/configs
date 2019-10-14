@@ -96,7 +96,9 @@
   },
   "eslint.validate": [
     "javascript",
-    "typescript"
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
   ],
   "javascript.updateImportsOnFileMove.enabled": "always",
   "go.buildOnSave": "off",
