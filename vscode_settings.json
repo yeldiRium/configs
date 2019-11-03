@@ -25,6 +25,12 @@
   "files.trimTrailingWhitespace": true,
   "latex-workshop.latex.recipes": [
     {
+      "name": "pdflatex",
+      "toolgs": [
+        "pdflatex"
+      ]
+    },
+    {
       "name": "pdflatex -> bibtex -> pdflatex*2",
       "tools": [
         "pdflatex",
@@ -86,6 +92,7 @@
       ]
     }
   ],
+  "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.view.pdf.viewer": "tab",
   "eslint.alwaysShowStatus": true,
   "eslint.options": {
@@ -133,5 +140,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.editor.showTabs": true,
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.tabSize": 2
 }
