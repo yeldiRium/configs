@@ -12,7 +12,7 @@ export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_CONFIG_DIRS=/etc/xdg
 export XDG_CACHE_HOME=$HOME/.cache
 
-export PATH=~/querbeet/workspace/tools/:~/.local/bin:$PATH
+export PATH=~/querbeet/workspace/tools/:~/.local/bin:/usr/local/lib:$PATH
 
 # HSTR configuration
 export HSTR_CONFIG=hicolor
