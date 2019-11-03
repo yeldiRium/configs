@@ -103,7 +103,8 @@
 					  org-web-tools
 					  org-bullets
 					  ox-reveal
-					  spaceline))))
+					  spaceline
+					  telega))))
    #+END_SRC
 
 ** initialize packages
@@ -134,7 +135,7 @@
 *** variables
     #+BEGIN_SRC emacs-lisp
       (custom-set-variables
-       '(whitespace-style '(face tabs lines-tail trailing)))
+       '(whitespace-style '(face tabs)))
     #+END_SRC
 
 ** dired
@@ -441,4 +442,10 @@
 *** keybindings
     #+BEGIN_SRC emacs-lisp
       (global-set-key [f8] 'neotree-toggle)
+    #+END_SRC
+** telega
+*** load
+    #+BEGIN_SRC emacs-lisp
+      (add-to-list 'load-path "~/querbeet/workspace/vendor/telegram/telega.el")
+      (require 'telega)
     #+END_SRC
