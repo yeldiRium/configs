@@ -65,20 +65,20 @@ alias 'cd..'='cd_up'
 
 eval $(thefuck --alias)
 
-# git
+## git
 alias amend='git commit --amend'
 alias amendno='git commit --amend --no-edit'
 
-# utility
+## utility
 alias ll='ls -al'
 
-# add npm-do for executing local packages
-function npm-do { (PATH=$(npm bin):$PATH; eval $@;) }
-
-source ~/.secret
+## php
+alias psysh='docker run -tiv $(pwd):/app -u 1000:1000 composer:1.9.1 php vendor/bin/psysh'
 
 # kubectl autocompletion
 source <(kubectl completion zsh)
+
+source ~/.secret
 
 # HSTR configuration - add this to ~/.bashrc
 alias hh=hstr                    # hh to be alias for hstr
