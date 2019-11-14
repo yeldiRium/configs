@@ -94,6 +94,7 @@
 					  company
 					  expand-region
 					  htmlize
+					  markdown-mode
 					  monokai-theme
 					  multiple-cursors
 					  neotree
@@ -448,4 +449,14 @@
     #+BEGIN_SRC emacs-lisp
       (add-to-list 'load-path "~/querbeet/workspace/vendor/telegram/telega.el")
       (require 'telega)
+    #+END_SRC
+
+** markdown-mode
+*** documentation
+
+  https://jblevins.org/projects/markdown-mode/
+
+*** check installation
+    #+BEGIN_SRC emacs-lisp
+      (ye/assert-package-installed 'markdown-mode)
     #+END_SRC
