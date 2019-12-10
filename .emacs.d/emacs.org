@@ -61,8 +61,8 @@
 
 *** bind [[move lines up/down][move lines up/down]]
     #+BEGIN_SRC emacs-lisp
-      (global-set-key (kbd "M-S-<up>") 'move-line-up)
-      (global-set-key (kbd "M-S-<down>") 'move-line-down)
+      (global-set-key (kbd "C-S-<up>") 'move-line-up)
+      (global-set-key (kbd "C-S-<down>") 'move-line-down)
     #+END_SRC
 
 *** bind revert-buffer to meta-r
