@@ -1,7 +1,7 @@
 # AVIT ZSH Theme
 
 PROMPT='
-$(_user_host)$(_current_dir) $(git_prompt_info) $(_python_version) $(_node_version)
+$(_user_host)$(_current_dir) $(git_prompt_info) $(_node_version)
 %{$fg[$CARETCOLOR]%}▶%{$resetcolor%} '
 
 function _current_dir() {
