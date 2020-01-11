@@ -1,7 +1,7 @@
 # AVIT ZSH Theme
 
 PROMPT='
-$(_user_host)$(_current_dir) $(git_prompt_info) $(_node_version)
+$(_user_host)$(_current_dir) $(git_prompt_info) $(_node_version) $(_is_nix)
 %{$fg[$CARETCOLOR]%}▶%{$resetcolor%} '
 
 function _current_dir() {
@@ -36,6 +36,12 @@ function _python_version() {
 
 function _node_version() {
   echo "%{$fg[green]%}n-$(node -v)%{$reset_color%}"
+}
+
+function _is_nix() {
+  if [[ ! -z "$NIX_STORE" ]]; then
+    echo "NIX"
+  fi
 }
 
 # Determine the time since last commit. If branch is clean,
