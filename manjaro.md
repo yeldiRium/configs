@@ -64,14 +64,28 @@ For access to keychain USB-stick.
 ### Clone Configs
 
 - clone from https://github.com/yeldiRium/configs to ~/querbeet/workspace/configs
-- set `$CONFIGS=~/querbeet/workspace/configs`
+- create `~/system_config.sh` and set `$CONFIG_DIR` to `~/querbeet/workspace/configs`
 - `touch ~/.secret`
-- symlink i3config `ln -s $CONFIGS/i3_config ~/.i3/config`
-  - and i3status config `ln -s $CONFIGS/i3status_config ~/.config/i3status/config`
+- symlink i3config `ln -s $CONFIG_DIR/i3_config ~/.i3/config`
+  - and i3status config `ln -s $CONFIG_DIR/i3status_config ~/.config/i3status/config`
   - optionall put a lockscreen wallpaper into `~/querbeet/gfx/wallpaper/lockscreen.png`
-- `ln -s $CONFIGS/.gitignore ~/.gitignore`
+- `ln -s $CONFIG_DIR/.gitignore ~/.gitignore`
   - `git config --global core.excludesfile ~/.gitignore`
-- `ln -s $CONFIGS/.configs/mimeapps.list ~/.configs/mimeapps.list` (overwrite existing)
+- `ln -s $CONFIG_DIR/.configs/mimeapps.list ~/.configs/mimeapps.list` (overwrite existing)
+
+### Setup ZSH
+
+- install `zsh`, `zsh-completions` and `zsh-syntax-highlighting` from manjaro repo
+- install `oh-my-zsh`
+  - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
+- https://forum.manjaro.org/t/how-to-setup-oh-my-zsh-in-manjaro/34519
+- symlink `$CONFIG_DIR/zsh/.zshrc` and `$CONFIG_DIR/zsh/.zshenv` and adjust them
+- create warp points
+  - querbeet
+  - workspace
+  - configs
+  - stuff
 
 ### Setup Git configuration
 
@@ -124,20 +138,6 @@ This is later loaded in .zshrc
 ### kubectl
 
 - install from manjaro repositories
-
-## Setup ZSH
-
-- install `zsh`, `zsh-completions` and `zsh-syntax-highlighting` from manjaro repo
-- install `oh-my-zsh`
-  - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
-
-- https://forum.manjaro.org/t/how-to-setup-oh-my-zsh-in-manjaro/34519
-- symlink .zshrc and .zshenv and adjust them
-- create warp points
-  - querbeet
-  - workspace
-  - configs
-  - stuff
 
 ## URXVT
 

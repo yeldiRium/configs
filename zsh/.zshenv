@@ -1,29 +1,25 @@
+source ./system_config.sh
+
 export QT_QPA_PLATFORMTHEME="qt5ct"
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
 export EDITOR=/usr/bin/vim
 export GIT_EDITOR=/usr/bin/vim
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-# fix "xdg-open fork-bomb" export your preferred browser from here
-export BROWSER=/usr/bin/google-chrome-unstable
 
-# XDG compatibility
-export XDG_DATA_HOME=$HOME/.local/share
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_DATA_DIRS=/usr/local/share:/usr/share
-export XDG_CONFIG_DIRS=/etc/xdg
-export XDG_CACHE_HOME=$HOME/.cache
+export LAUNCHPAD_CHROME=/usr/bin/chromium
+export BROWSER=/usr/bin/chromium
 
-export PATH=~/querbeet/workspace/tools/:~/.local/bin:/usr/local/lib:$PATH
+export GOPATH=$HOME/go
 
-# HSTR configuration
-export HSTR_CONFIG=hicolor
-export HSTR_CONFIG=raw-history-view
-export HSTR_CONFIG=keywords-matching
-export HISTORY_IGNORE="hstr:$HISTORY_IGNORE"
+source $CONFIG_DIR/zsh/environment/xdg.sh
+source $CONFIG_DIR/zsh/environment/hstr.sh
+source $CONFIG_DIR/zsh/environment/less.sh
+
+export PATH=~/.local/bin:/usr/local/lib:$PATH
+export PATH=~/querbeet/workspace/tools/:$PATH
+export PATH=$PATH:$GOPATH/bin
+
+source $CONFIG_DIR/zsh/environment/rvm.sh
+source $CONFIG_DIR/zsh/environment/nvm.sh
 
 source ~/.secretenv
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-[[ -s "/usr/share/nvm/init-nvm.sh" ]] && source /usr/share/nvm/init-nvm.sh
