@@ -32,6 +32,7 @@ alias node10b="$nodeDockerBCmd node:10 bash -l"
 
 alias node="node12"
 alias npm="$nodeDockerCmd node:12 npm"
+alias npx="$nodeDockerCmd node:12 npx"
 alias yarn="$nodeDockerCmd node:12 yarn"
 
 ## php
