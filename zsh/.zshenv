@@ -20,6 +20,5 @@ export PATH=~/querbeet/workspace/tools/:$PATH
 export PATH=$PATH:$GOPATH/bin
 
 source $CONFIG_DIR/zsh/environment/rvm.sh
-source $CONFIG_DIR/zsh/environment/nvm.sh
 
 source ~/.secretenv
