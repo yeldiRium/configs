@@ -1,3 +1,4 @@
+export CONFIG_DIR="$HOME/querbeet/workspace/configs/"
 source ./system_config.sh
 
 export QT_QPA_PLATFORMTHEME="qt5ct"

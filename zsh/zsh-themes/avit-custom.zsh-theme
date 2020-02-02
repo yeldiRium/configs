@@ -1,7 +1,7 @@
 # AVIT ZSH Theme
 
 PROMPT='
-$(_user_host)$(_current_dir) $(git_prompt_info) $(_node_version) $(_is_nix)
+$(_user_host)$(_current_dir) $(git_prompt_info) $(_is_nix)
 %{$fg[$CARETCOLOR]%}▶%{$resetcolor%} '
 
 function _current_dir() {
@@ -32,10 +32,6 @@ function _vi_status() {
 
 function _python_version() {
   echo "%{$fg[yellow]%}p-$(python --version | sed 's/Python //')%{$reset_color%}"
-}
-
-function _node_version() {
-  echo "%{$fg[green]%}n-$(node -v)%{$reset_color%}"
 }
 
 function _is_nix() {

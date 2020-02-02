@@ -15,17 +15,24 @@ eval $(thefuck --alias)
 alias amend='git commit --amend'
 alias amendno='git commit --amend --no-edit'
 
-## node dev
-alias node13='docker run -ti -w /app -v $(pwd):/app --user="$(id -u):$(id -g)" node:13 node'
-alias node13b='docker run -ti -w /app -v $CONFIG_DIR/zsh/various/docker.bashrc:/home/node/.bashrc:ro -v $(pwd):/app --user="$(id -u):$(id -g)" node:13 bash'
-alias node12='docker run -ti -w /app -v $(pwd):/app --user="$(id -u):$(id -g)" node:12 node'
-alias node12b='docker run -ti -w /app -v $CONFIG_DIR/zsh/various/docker.bashrc:/home/node/.bashrc:ro -v $(pwd):/app --user="$(id -u):$(id -g)" node:12 bash'
-alias node10='docker run -ti -w /app -v $(pwd):/app --user="$(id -u):$(id -g)" node:10 node'
-alias node10b='docker run -ti -w /app -v $CONFIG_DIR/zsh/various/docker.bashrc:/home/node/.bashrc:ro -v $(pwd):/app --user="$(id -u):$(id -g)" node:10 bash'
+## docker
+dockerAliases="-v $CONFIG_DIR/zsh/various/aliases.sh:/etc/profile.d/aliases.sh:ro"
+dockerPwd="-w /app -v $(pwd):/app"
+dockerUser="--user=\"$(id -u):$(id -g)\""
 
-alias node='node12'
-alias npm='docker run -ti -w /app -v $(pwd):/app --user="$(id -u):$(id -g)" node:12 npm'
-alias yarn='docker run -ti -w /app -v $(pwd):/app --user="$(id -u):$(id -g)" node:12 yarn'
+## node dev
+nodeDockerCmd="docker run -ti $dockerUser $dockerPwd"
+alias node13="$nodeDockerCmd node:13 node"
+alias node12="$nodeDockerCmd node:12 node"
+alias node10="$nodeDockerCmd node:10 node"
+nodeDockerBCmd="docker run -ti $dockerAliases -w /app"
+alias node13b="$nodeDockerBCmd node:13 bash -l"
+alias node12b="$nodeDockerBCmd node:12 bash -l"
+alias node10b="$nodeDockerBCmd node:10 bash -l"
+
+alias node="node12"
+alias npm="$nodeDockerCmd node:12 npm"
+alias yarn="$nodeDockerCmd node:12 yarn"
 
 ## php
 alias psysh='docker run -tiv $(pwd):/app -u 1000:1000 composer:1.9.1 php vendor/bin/psysh'
