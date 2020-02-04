@@ -17,7 +17,7 @@ alias amendno='git commit --amend --no-edit'
 
 ## docker
 dockerAliases="-v $CONFIG_DIR/zsh/various/aliases.sh:/etc/profile.d/aliases.sh:ro"
-dockerPwd="-w /app -v $(pwd):/app"
+dockerPwd="-w /app -v \$(pwd):/app"
 dockerUser="--user=\"$(id -u):$(id -g)\""
 
 ## node dev
