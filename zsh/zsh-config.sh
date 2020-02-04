@@ -8,6 +8,7 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 # manual zsh configuration
+setopt histignorespace
 setopt COMPLETE_ALIASES
 setopt LIST_AMBIGUOUS
 setopt LIST_ROWS_FIRST

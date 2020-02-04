@@ -44,5 +44,4 @@ source <(kubectl completion zsh)
 source ~/.secret
 
 # HSTR configuration - add this to ~/.bashrc
-alias hh=hstr                    # hh to be alias for hstr
-bindkey -s "\C-r" "hstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc)
+bindkey -s "\C-r" " hstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc)
