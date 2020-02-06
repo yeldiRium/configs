@@ -31,9 +31,6 @@ alias node12b="$nodeDockerBCmd node:12 bash -l"
 alias node10b="$nodeDockerBCmd node:10 bash -l"
 
 alias node="node12"
-alias npm="$nodeDockerCmd node:12 npm"
-alias npx="$nodeDockerCmd node:12 npx"
-alias yarn="$nodeDockerCmd node:12 yarn"
 
 ## php
 alias psysh='docker run -tiv $(pwd):/app -u 1000:1000 composer:1.9.1 php vendor/bin/psysh'
