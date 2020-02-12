@@ -20,6 +20,8 @@ dockerAliases="-v $CONFIG_DIR/zsh/various/aliases.sh:/etc/profile.d/aliases.sh:r
 dockerPwd="-w /app -v \$(pwd):/app"
 dockerUser="--user=\"$(id -u):$(id -g)\""
 
+alias doc="docker-compose"
+
 ## node dev
 nodeDockerCmd="docker run -ti $dockerUser $dockerPwd"
 alias node13="$nodeDockerCmd node:13 node"
