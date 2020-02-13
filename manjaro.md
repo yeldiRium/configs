@@ -43,11 +43,7 @@ sudo ln -s $CONFIGS/modprobe.d/nobeep.conf /etc/modprobe.d/nobeep.conf
   - slack
   - etc
 
-## Install VeraCrypt
-
-For access to keychain USB-stick.
-
-## Add SSH keys and config
+## Add SSH keys and config from secure drive
 
 ## Setup file structure
 
@@ -72,6 +68,7 @@ For access to keychain USB-stick.
 - `ln -s $CONFIG_DIR/.gitignore ~/.gitignore`
   - `git config --global core.excludesfile ~/.gitignore`
 - `ln -s $CONFIG_DIR/.configs/mimeapps.list ~/.configs/mimeapps.list` (overwrite existing)
+- `ln -s $CONFIG_DIR/.gnupg/gpg.conf ~/.gnupg/gpg.conf`
 
 ### Setup ZSH
 
