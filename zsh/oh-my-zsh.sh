@@ -5,7 +5,6 @@ plugins=(
 	kubectl # aliases and completion
 	npm # completion
 	git # a LOT of aliases for git
-	nix-shell # use zsh as nix shell
 	pip # completion
 	python # completion
 	wd # efficient directory switching
