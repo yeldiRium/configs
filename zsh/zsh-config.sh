@@ -14,3 +14,4 @@ setopt LIST_AMBIGUOUS
 setopt LIST_ROWS_FIRST
 setopt AUTO_CD
 if [ -e /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh; fi
+if [ -e /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then . /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh; fi
