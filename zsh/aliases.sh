@@ -9,36 +9,24 @@ function cd_up() {
 alias 'cd..'='cd_up'
 
 
-eval $(thefuck --alias)
+if [ -x "$(command -v thefuck)" ]; then
+    eval $(thefuck --alias)
+fi
 
 ## git
 alias amend='git commit --amend'
 alias amendno='git commit --amend --no-edit'
 
 ## docker
-dockerAliases="-v $CONFIG_DIR/zsh/various/aliases.sh:/etc/profile.d/aliases.sh:ro"
-dockerPwd="-w /app -v \$(pwd):/app"
-dockerUser="--user=\"$(id -u):$(id -g)\""
-
 alias doc="docker-compose"
-
-## node dev
-nodeDockerCmd="docker run -ti $dockerUser $dockerPwd"
-alias node13="$nodeDockerCmd node:13 node"
-alias node12="$nodeDockerCmd node:12 node"
-alias node10="$nodeDockerCmd node:10 node"
-nodeDockerBCmd="docker run -ti $dockerAliases -w /app"
-alias node13b="$nodeDockerBCmd node:13 bash -l"
-alias node12b="$nodeDockerBCmd node:12 bash -l"
-alias node10b="$nodeDockerBCmd node:10 bash -l"
-
-alias node="node12"
 
 ## php
 alias psysh='docker run -tiv $(pwd):/app -u 1000:1000 composer:1.9.1 php vendor/bin/psysh'
 
 # kubectl autocompletion
-source <(kubectl completion zsh)
+if [ -x "$(command -v kubectl)" ]; then
+    source <(kubectl completion zsh)
+fi
 
 source ~/.secret
 
