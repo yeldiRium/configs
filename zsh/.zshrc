@@ -15,6 +15,9 @@ compinit
 # aliases
 source $CONFIG_DIR/zsh/aliases.sh
 
+# NVM setup
+source $CONFIG_DIR/zsh/nvm.sh
+
 # NIX setup (https://nixos.org/nix/manual/#chap-quick-start)
 if [ -e /home/yeldir/.nix-profile/etc/profile.d/nix.sh ]; then . /home/yeldir/.nix-profile/etc/profile.d/nix.sh; fi
 
