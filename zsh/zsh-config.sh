@@ -13,4 +13,4 @@ setopt COMPLETE_ALIASES
 setopt LIST_AMBIGUOUS
 setopt LIST_ROWS_FIRST
 setopt AUTO_CD
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -e /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh; fi
