@@ -1,5 +1,7 @@
 export CONFIG_DIR="$HOME/querbeet/workspace/configs/"
-source ./system_config.sh
+export TOOLS_DIR="$HOME/querbeet/workspace/tools/"
+export WVL_DIR="$HOME/querbeet/stuff/private/wvl/"
+source ~/system_config.sh
 
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
