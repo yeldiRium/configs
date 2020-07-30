@@ -30,5 +30,3 @@ fi
 
 source ~/.secret
 
-# HSTR configuration - add this to ~/.bashrc
-bindkey -s "\C-r" " hstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc)

@@ -18,6 +18,9 @@ source $CONFIG_DIR/zsh/aliases.sh
 # NVM setup
 source $CONFIG_DIR/zsh/nvm.sh
 
+# HSTR configuration
+source $CONFIG_DIR/zsh/hstr.sh
+
 # GH completion
 eval "$(gh completion -s zsh)"
 
