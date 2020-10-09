@@ -5,3 +5,8 @@
 
 # Files
 data.location=~/querbeet/stuff/private/taskwarrior
+_forcecolor=off
+context.work=+tnw
+context=work
+context.home=-tnw
+context.gruene=+gruene
