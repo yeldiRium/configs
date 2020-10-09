@@ -53,10 +53,10 @@
 ** keybindings
 *** bind window movement to meta+<arrow keys>
     #+BEGIN_SRC emacs-lisp
-      (global-set-key (kbd "s-<up>") 'windmove-up)
-      (global-set-key (kbd "s-<right>") 'windmove-right)
-      (global-set-key (kbd "s-<down>") 'windmove-down)
-      (global-set-key (kbd "s-<left>") 'windmove-left)
+      (global-set-key (kbd "M-<up>") 'windmove-up)
+      (global-set-key (kbd "M-<right>") 'windmove-right)
+      (global-set-key (kbd "M-<down>") 'windmove-down)
+      (global-set-key (kbd "M-<left>") 'windmove-left)
     #+END_SRC
 
 *** bind [[move lines up/down][move lines up/down]]
