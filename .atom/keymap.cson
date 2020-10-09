@@ -1,5 +1,0 @@
-'.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
-  'alt-g': 'find-and-replace:select-next'
-  'alt-shift-g': 'find-and-replace:select-all'
-  'ctrl-l': 'go-to-line:toggle'
-  'alt-shift-u': 'command-palette:toggle'
