@@ -129,9 +129,8 @@
   "[css]": {},
   "css.validate": false,
   "languageServerHaskell.enableHIE": false,
-  "eslint.autoFixOnSave": true,
   "editor.mouseWheelZoom": true,
-  "workbench.colorTheme": "Nord",
+  "workbench.colorTheme": "Monokai",
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
@@ -141,5 +140,20 @@
   },
   "workbench.editor.showTabs": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.format.enable": true,
+  "editor.minimap.showSlider": "always",
+  "C_Cpp.updateChannel": "Insiders",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  "yaml.completion": false,
+  "yaml.format.enable": false,
+  "yaml.hover": false,
+  "yaml.validate": false,
+  "window.zoomLevel": 0
 }

@@ -233,7 +233,7 @@
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+alt+u",
+    "key": "shift+alt+a",
     "command": "workbench.action.showCommands"
   },
   {
