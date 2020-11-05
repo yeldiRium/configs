@@ -35,15 +35,11 @@
     "when": "editorFocus"
   },
   {
-    "key": "ctrl+alt+left",
-    "command": "workbench.action.navigateBack"
-  },
-  {
     "key": "ctrl+alt+-",
     "command": "-workbench.action.navigateBack"
   },
   {
-    "key": "ctrl+alt+right",
+    "key": "shift+alt+right",
     "command": "workbench.action.navigateForward"
   },
   {
@@ -233,7 +229,7 @@
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+alt+a",
+    "key": "alt+shift+a",
     "command": "workbench.action.showCommands"
   },
   {
@@ -261,5 +257,24 @@
   {
     "key": "shift+alt+t",
     "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+left",
+    "command": "-editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+left",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "shift+alt+right",
+    "command": "-editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
   }
 ]
