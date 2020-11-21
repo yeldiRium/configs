@@ -39,7 +39,7 @@
     "command": "-workbench.action.navigateBack"
   },
   {
-    "key": "shift+alt+right",
+    "key": "alt+right",
     "command": "workbench.action.navigateForward"
   },
   {
@@ -276,5 +276,15 @@
     "key": "shift+alt+right",
     "command": "-editor.action.smartSelect.expand",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+right",
+    "command": "-workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+right",
+    "command": "-org.incrementContext",
+    "when": "editorLangId == 'org'"
   }
 ]
