@@ -28,5 +28,9 @@ if [ -x "$(command -v kubectl)" ]; then
     source <(kubectl completion zsh)
 fi
 
+# neuron (https://github.com/srid/neuron)
+alias zk-se='code $(neuron search)'
+alias zk-sc='neuron search | rev | cut -d '/' -f 1 | rev | cut -d '.' -f 1 | xclip -sel clip -r'
+
 source ~/.secret
 
