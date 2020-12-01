@@ -31,6 +31,14 @@ fi
 # neuron (https://github.com/srid/neuron)
 alias zk-se='code $(neuron search)'
 alias zk-sc='neuron search | rev | cut -d '/' -f 1 | rev | cut -d '.' -f 1 | xclip -sel clip -r'
+zk-qt() {
+    if [ ! -n $1 ]
+    then
+	echo "please enter a tag to query for"
+    else
+	neuron query -t $1 | jq '.result[] | { id: .zettelID, title: .zettelTitle }'
+    fi
+}
 
 source ~/.secret
 
