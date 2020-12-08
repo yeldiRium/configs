@@ -24,6 +24,9 @@ export PATH=~/.local/bin:/usr/local/lib:$PATH
 export PATH=~/querbeet/workspace/tools/:$PATH
 export PATH=$PATH:$GOPATH/bin
 
+# Add Nix environment.
+if [ -e /home/yeldir/.nix-profile/etc/profile.d/nix.sh ]; then . /home/yeldir/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 

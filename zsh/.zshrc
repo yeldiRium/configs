@@ -24,9 +24,6 @@ source $CONFIG_DIR/zsh/hstr.sh
 # GH completion
 eval "$(gh completion -s zsh)"
 
-# NIX setup (https://nixos.org/nix/manual/#chap-quick-start)
-if [ -e /home/yeldir/.nix-profile/etc/profile.d/nix.sh ]; then . /home/yeldir/.nix-profile/etc/profile.d/nix.sh; fi
-
 if [[ -x $TOOLS_DIR/wvl ]]; then $TOOLS_DIR/wvl; fi
 
 # Generic Colorizer
