@@ -61,5 +61,7 @@
   "M-<left>" 'windmove-left)
 
 (map! :map magit-mode-map
-      :n "k" 'magit-discard
-)
+      :n "k" 'magit-discard)
+
+;; Prevent emacs from overwriting system clipboard unintentionally.
+(setq x-select-enable-clipboard nil)
