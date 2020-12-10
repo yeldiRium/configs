@@ -29,8 +29,10 @@ if [ -x "$(command -v kubectl)" ]; then
 fi
 
 # neuron (https://github.com/srid/neuron)
-alias zk-se='code $(neuron search)'
-alias zk-sc='neuron search | rev | cut -d '/' -f 1 | rev | cut -d '.' -f 1 | xclip -sel clip -r'
+alias zk-se="code $(neuron search)"
+alias zk-sc="neuron search | rev | cut -d '/' -f 1 | rev | cut -d '.' -f 1 | xclip -sel clip -r"
+alias zk-st="neuron query | jq -r '.result[].zettelTags[]' | uniq | dmenu | xclip -sel clip -r"
+
 zk-qt() {
     if [ ! -n $1 ]
     then
