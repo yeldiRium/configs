@@ -9,6 +9,7 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export EDITOR=/usr/bin/vim
 export GIT_EDITOR=/usr/bin/vim
 
+export TERMINAL=termite
 export TERM=termite
 
 export LAUNCHPAD_CHROME=/usr/bin/chromium
