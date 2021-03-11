@@ -14,13 +14,6 @@ if [ -x "$(command -v thefuck)" ]; then
     eval $(thefuck --alias)
 fi
 
-## git
-alias amend='git commit --amend'
-alias amendno='git commit --amend --no-edit'
-
-## docker
-alias doc="docker-compose"
-
 ## php
 alias psysh='docker run -tiv $(pwd):/app -u 1000:1000 composer:1.9.1 php vendor/bin/psysh'
 
