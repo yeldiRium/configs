@@ -24,6 +24,7 @@ source $CONFIG_DIR/zsh/environment/less.sh
 export PATH=~/.local/bin:/usr/local/lib:$PATH
 export PATH=~/querbeet/workspace/tools/:$PATH
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:~/.cargo/bin
 
 # Add Nix environment.
 if [ -e /home/yeldir/.nix-profile/etc/profile.d/nix.sh ]; then . /home/yeldir/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
