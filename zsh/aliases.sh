@@ -1,5 +1,6 @@
-alias ls='ls --color=auto'
-alias ll='ls -al'
+alias ls='exa'
+alias ll='exa --long --all --git'
+alias lt='exa --long --all --tree --level'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 
