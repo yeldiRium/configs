@@ -1,6 +1,6 @@
 alias ls='exa'
-alias ll='exa --long --all --git'
-alias lt='exa --long --all --tree --level'
+alias ll='exa --long --all --header --git'
+alias lt='exa --long --all --header --git --tree --level'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 
