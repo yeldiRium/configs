@@ -94,7 +94,6 @@
   ],
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.view.pdf.viewer": "tab",
-  "eslint.alwaysShowStatus": true,
   "eslint.options": {
     "extensions": [
       "javascript",
@@ -123,14 +122,13 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[haskell]": {
-    "editor.defaultFormatter": "sergey-kintsel.haskell-formatter-vscode-extension"
+    "editor.defaultFormatter": "haskell.haskell"
   },
   "keyboard.dispatch": "keyCode",
   "[css]": {},
   "css.validate": false,
   "languageServerHaskell.enableHIE": false,
   "editor.mouseWheelZoom": true,
-  "workbench.colorTheme": "Monokai",
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
@@ -144,7 +142,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.format.enable": true,
   "editor.minimap.showSlider": "always",
   "C_Cpp.updateChannel": "Insiders",
   "[typescriptreact]": {
@@ -155,6 +152,11 @@
   "yaml.format.enable": false,
   "yaml.hover": false,
   "yaml.validate": false,
-  "window.zoomLevel": 0
-  "editor.lineNumbers": "relative"
+  "window.zoomLevel": 0,
+  "editor.lineNumbers": "relative",
+  "eslint.format.enable": true,
+  "workbench.colorTheme": "Monokai Pro",
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "rust.clippy_preference": "on",
+  "rust.all_features": true
 }
