@@ -80,3 +80,8 @@
     (setq ranger-override-dired 'ranger))
 
 (add-hook 'emacs-startup-hook 'treemacs)
+
+(setq lsp-eslint-server-command
+   '("node"
+      "/home/yeldir/.vscode/extensions/dbaeumer.vscode-eslint-2.1.19/server/out/eslintServer.js"
+      "--stdio"))
