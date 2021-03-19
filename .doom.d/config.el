@@ -85,3 +85,9 @@
    '("node"
       "/home/yeldir/.vscode/extensions/dbaeumer.vscode-eslint-2.1.19/server/out/eslintServer.js"
       "--stdio"))
+
+;; Improve visuals for flycheck info highlights.
+(doom-themes-set-faces nil
+  '(flycheck-info
+    :foreground (doom-darken (doom-color 'fg) 0.5)
+    :underline nil))
