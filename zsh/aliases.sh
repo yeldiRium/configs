@@ -29,6 +29,8 @@ alias zk-se='code $(neuron search)'
 alias zk-sc="neuron search | rev | cut -d '/' -f 1 | rev | cut -d '.' -f 1 | xclip -sel clip -r"
 alias zk-st="neuron query | jq -r '.result[].zettelTags[]' | sort | uniq | dmenu | xclip -sel clip -r"
 
+alias hl="hledger"
+
 zk-qt() {
     if [ ! -n $1 ]
     then
