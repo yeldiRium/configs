@@ -24,8 +24,6 @@ source $CONFIG_DIR/zsh/hstr.sh
 # GH completion
 eval "$(gh completion -s zsh)"
 
-if [[ -x $TOOLS_DIR/wvl ]]; then $TOOLS_DIR/wvl; fi
-
 # Generic Colorizer
 [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
 
