@@ -70,3 +70,6 @@
 (setq display-line-numbers-type 'relative)
 
 (add-to-list 'auto-mode-alist '("\\.journal$" . ledger-mode))
+
+(after! ranger
+    (setq ranger-override-dired 'ranger))
