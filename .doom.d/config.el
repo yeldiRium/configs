@@ -78,3 +78,5 @@
 ;; Make dired start in ranger mode.
 (after! ranger
     (setq ranger-override-dired 'ranger))
+
+(add-hook 'emacs-startup-hook 'treemacs)
