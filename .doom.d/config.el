@@ -55,7 +55,10 @@
 ;; they are implemented.
 
 (map!
-  "M-r" 'revert-buffer
+  "M-r" 'revert-buffer)
+
+(map!
+  :map general-override-mode-map
   "M-<up>" 'windmove-up
   "M-<right>" 'windmove-right
   "M-<down>" 'windmove-down
