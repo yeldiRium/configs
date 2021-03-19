@@ -64,7 +64,7 @@
       :n "k" 'magit-discard)
 
 ;; Prevent emacs from overwriting system clipboard unintentionally.
-(setq x-select-enable-clipboard nil)
+(setq select-enable-clipboard nil)
 
 (setq display-line-numbers-type 'relative)
 
