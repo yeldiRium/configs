@@ -69,3 +69,5 @@
 (setq display-line-numbers-type 'relative)
 
 (add-to-list 'auto-mode-alist '("\\.journal$" . ledger-mode))
+
+(setq doom-font (font-spec :family "Droid Sans Mono" :size 12))
