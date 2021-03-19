@@ -4,6 +4,8 @@ alias lt='exa --long        --group --all --header --git --tree --level'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 
+alias vim='nvim'
+
 function cd_up() {
   cd $(printf "%0.s../" $(seq 1 $1 ));
 }
