@@ -72,7 +72,9 @@
 
 (setq display-line-numbers-type 'relative)
 
+;; Bind ledger-mode for .journal files.
 (add-to-list 'auto-mode-alist '("\\.journal$" . ledger-mode))
 
+;; Make dired start in ranger mode.
 (after! ranger
     (setq ranger-override-dired 'ranger))
