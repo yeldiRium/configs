@@ -96,3 +96,6 @@
  :v "M-d" 'evil-multiedit-match-and-next
  :n "M-D" 'evil-multiedit-match-and-prev
  :v "M-D" 'evil-multiedit-match-and-prev)
+
+(setq undo-tree-visualizer-diff t)
+(after! undo-tree-mode 'undo-tree-visualizer-toggle-diff)
