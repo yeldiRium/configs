@@ -55,14 +55,14 @@
 ;; they are implemented.
 
 (map!
-  "M-r" 'revert-buffer)
+ "M-r" 'revert-buffer)
 
 (map!
-  :map general-override-mode-map
-  "M-<up>" 'windmove-up
-  "M-<right>" 'windmove-right
-  "M-<down>" 'windmove-down
-  "M-<left>" 'windmove-left)
+ :map general-override-mode-map
+ "M-<up>" 'windmove-up
+ "M-<right>" 'windmove-right
+ "M-<down>" 'windmove-down
+ "M-<left>" 'windmove-left)
 
 (map! :map magit-mode-map
       :n "k" 'magit-discard)
@@ -77,15 +77,22 @@
 
 ;; Make dired start in ranger mode.
 (after! ranger
-    (setq ranger-override-dired 'ranger))
+  (setq ranger-override-dired 'ranger))
 
 (setq lsp-eslint-server-command
-   '("node"
-      "/home/yeldir/.vscode/extensions/dbaeumer.vscode-eslint-2.1.19/server/out/eslintServer.js"
-      "--stdio"))
+      '("node"
+        "/home/yeldir/.vscode/extensions/dbaeumer.vscode-eslint-2.1.19/server/out/eslintServer.js"
+        "--stdio"))
 
 ;; Improve visuals for flycheck info highlights.
 (doom-themes-set-faces nil
   '(flycheck-info
     :foreground (doom-darken (doom-color 'fg) 0.5)
     :underline nil))
+
+;; Keybindings for evil-multiedit.
+(map!
+ :n "M-d" 'evil-multiedit-match-and-next
+ :v "M-d" 'evil-multiedit-match-and-next
+ :n "M-D" 'evil-multiedit-match-and-prev
+ :v "M-D" 'evil-multiedit-match-and-prev)
