@@ -30,6 +30,7 @@ alias zk-sc="neuron search | rev | cut -d '/' -f 1 | rev | cut -d '.' -f 1 | xcl
 alias zk-st="neuron query | jq -r '.result[].zettelTags[]' | sort | uniq | dmenu | xclip -sel clip -r"
 
 alias hl="hledger"
+alias hlc="hledger check -s ordereddates payees"
 
 zk-qt() {
     if [ ! -n $1 ]
