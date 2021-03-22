@@ -9,6 +9,6 @@ include /usr/share/doc/task/rc/dark-gray-256.theme
 data.location=~/querbeet/stuff/private/taskwarrior
 _forcecolor=off
 context.work=+tnw
-context=work
 context.home=-tnw
 context.gruene=+gruene
+context=home
