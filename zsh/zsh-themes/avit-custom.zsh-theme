@@ -2,7 +2,7 @@
 
 PROMPT='
 $(_user_host)$(_current_dir) $(git_prompt_info) $(_is_nix)
-%{$fg[$CARETCOLOR]%}▶%{$resetcolor%} '
+%{$fg[$CARETCOLOR]%}#%{$resetcolor%} '
 
 function _current_dir() {
   local _max_pwd_length="65"
