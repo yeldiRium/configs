@@ -103,3 +103,6 @@
 
 (setq undo-tree-visualizer-diff t)
 (after! undo-tree-mode 'undo-tree-visualizer-toggle-diff)
+
+(map! :map typescript-mode-map
+      :n "M-F" 'lsp-eslint-fix-all)
