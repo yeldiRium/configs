@@ -90,6 +90,10 @@
     :foreground (doom-darken (doom-color 'fg) 0.5)
     :underline nil))
 
+(doom-themes-set-faces nil
+  '(line-number
+    :foreground "#ffffff"))
+
 ;; Keybindings for evil-multiedit.
 (map!
  :n "M-d" 'evil-multiedit-match-and-next
