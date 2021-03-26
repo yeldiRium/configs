@@ -2,6 +2,9 @@
 .vscode
 .idea
 
+# Emacs LSP
+.log
+
 # emacs temp files
 *~
 
