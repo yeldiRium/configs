@@ -74,6 +74,8 @@
 
 ;; Bind ledger-mode for .journal files.
 (add-to-list 'auto-mode-alist '("\\.journal$" . ledger-mode))
+;; Bind web-mode for .ejs files
+(add-to-list 'auto-mode-alist '("\\.ejs$" . web-mode))
 
 ;; Make dired start in ranger mode.
 (after! ranger
