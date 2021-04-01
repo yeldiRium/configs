@@ -108,3 +108,6 @@
 
 (map! :map typescript-mode-map
       :n "M-F" 'lsp-eslint-fix-all)
+
+(map! :map ivy-minibuffer-map
+      "RET" 'ivy-immediate-done)
